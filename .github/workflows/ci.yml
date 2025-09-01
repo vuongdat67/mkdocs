@@ -5,6 +5,9 @@ on:
       - main
       - master
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -32,3 +35,5 @@ jobs:
         run: pip install mkdocs mkdocs-material
       - name: Build and Deploy MkDocs site
         run: mkdocs gh-deploy --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
