@@ -1,0 +1,98 @@
+site_name: Hope Docs
+site_author: Vuong Thanh Dat
+copyright: Copyright &copy; 2025 Vuong Thanh Dat
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Fira Code
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/brightness-2
+        name: Switch to dark mode
+      primary: indigo
+      accent: deep purple
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: black
+      accent: green
+  features:
+    # Core navigation
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    # Content features
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.view
+    - content.action.edit
+plugins:
+  - search:
+      lang:
+        - en
+        - vi
+  - blog
+  - tags:
+      tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      tags_slugify_format: "tag:{slug}"
+
+markdown_extensions:
+  - footnotes
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://youtube.com/@yourchannel
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/vuongdat67
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/yourprofile
+  generator: false
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
