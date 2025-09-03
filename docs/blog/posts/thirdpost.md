@@ -7,12 +7,10 @@ categories:
     - Life
 tags:
     - life
+draft: true
 ---
 
-# My third blog post
+# Blog Post Title
 
-this is the text for my third blog post
+Your content here
 
-<!-- more -->
-
-All the text here appears in the blog post

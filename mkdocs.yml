@@ -1,11 +1,20 @@
 site_name: Hope Docs
 site_url: https://vuongdat67.github.io/mkdocs/
+repo_url: https://github.com/vuongdat67/mkdocs
+repo_name: vuongdat67/mkdocs
+edit_uri: edit/main/docs/
 site_author: Vuong Thanh Dat
+site_description: Documentation for my project
 copyright: Copyright &copy; 2025 Vuong Thanh Dat
 theme:
   name: material
+  direction: ltr
+  language: en
   font:
-    text: Roboto
+    text: Inter
+    heading: Noto Sans
+    subheading: Inter
+    meta: Inter
     code: Fira Code
   palette: 
     - scheme: default
@@ -33,54 +42,130 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.footer
+    - navigation.expand
     # Content features
     - toc.follow
+    # Search
     - search.suggest
     - search.highlight
     - search.share
+    # Content
     - content.code.copy
     - content.code.select
     - content.code.annotate
     - content.tabs.link
     - content.action.view
     - content.action.edit
+    - content.attachment
+    # Tooltips
+    - content.tooltips
+    - content.footnote.tooltips
+    # Announcements
+    # - announce.dismiss
+    # - header.autohide
 plugins:
   - search:
-      lang:
-        - en
-        - vi
-  - blog
+      lang: [en, vi]
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+  - callouts
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_date_format: full
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+      archive_date_format: yyyy
+      archive_url_date_format: yyyy
+      authors_file: "blog/.authors.yml"
+      categories_name: "Categories"
+      archive_name: "Archive"
   - tags:
       tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
       tags_slugify_format: "tag:{slug}"
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
+  - macros
+  - glightbox
+
 
 markdown_extensions:
+  # Essential extensions
   - footnotes
   - def_list
+  - abbr
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - tables
+  - admonition
+  - pymdownx.details
   - toc:
       permalink: true
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  
+  # Code highlighting
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  
+  # Text formatting
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys
+  
+  # Lists and tasks
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - sane_lists
+  
+  # Tabs
   - pymdownx.tabbed:
       alternate_style: true
-  - admonition
-  - pymdownx.details
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  
+  # Math and links
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+  
+  # Emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  # Endline br
+  - nl2br
+
 
 extra:
   social:
@@ -91,9 +176,21 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/yourprofile
   generator: false
+    # Add security headers
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
 
 validation:
   omitted_files: warn
   absolute_links: warn
   unrecognized_links: warn
-
