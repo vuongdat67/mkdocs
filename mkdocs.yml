@@ -71,7 +71,6 @@ plugins:
         - stemmer
         - stopWordFilter
         - trimmer
-  - callouts
   - blog:
       blog_dir: blog
       blog_toc: true
