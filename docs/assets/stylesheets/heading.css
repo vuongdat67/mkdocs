@@ -1,0 +1,26 @@
+/* Heading màu sắc riêng */
+.md-typeset h1 {
+  color: #e91e63; /* hồng */
+}
+
+.md-typeset h2 {
+  color: #3f51b5; /* xanh indigo */
+}
+
+.md-typeset h3 {
+  color: #009688; /* teal */
+}
+
+.md-typeset h4 {
+  color: #ff5722; /* cam */
+}
+
+.md-typeset h5 {
+  color: #795548; /* nâu */
+}
+
+.md-typeset h6 {
+  color: #607d8b; /* xanh xám */
+}
+
+

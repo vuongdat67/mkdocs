@@ -189,6 +189,9 @@ extra:
           data: 0
           note: Thanks for your feedback!
 
+extra_css:
+  - assets/stylesheets/heading.css
+
 validation:
   omitted_files: warn
   absolute_links: warn
