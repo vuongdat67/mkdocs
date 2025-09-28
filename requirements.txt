@@ -4,3 +4,6 @@ pymdown-extensions
 mkdocs-macros-plugin
 mkdocs-glightbox
 mkdocs-minify-plugin
+mkdocs-kroki-plugin
+mkdocs-wikilinks-plugin
+mkdocs-obsidian-support-plugin

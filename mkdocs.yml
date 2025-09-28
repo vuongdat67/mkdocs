@@ -95,6 +95,10 @@ plugins:
         remove_comments: true
   - macros
   - glightbox
+  - ezlinks
+  - obsidian-support
+  - kroki:
+      server_url: https://kroki.io
 
 
 markdown_extensions:
