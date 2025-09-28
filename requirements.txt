@@ -7,3 +7,4 @@ mkdocs-minify-plugin
 mkdocs-kroki-plugin
 mkdocs-wikilinks-plugin
 mkdocs-obsidian-support-plugin
+mkdocs-git-revision-date-localized-plugin

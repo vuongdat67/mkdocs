@@ -4,6 +4,6 @@ This is my mkdocs
 
 By: Vuong Thanh Dat
 
-[Quick Start](example/guide.md/)
+[Quick Start](study/example/guide.md/)
 
 

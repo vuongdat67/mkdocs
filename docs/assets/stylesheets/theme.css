@@ -1,0 +1,12 @@
+/* Catppuccin Mocha for MkDocs Material */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:        #1e1e2e;
+  --md-primary-fg-color:        #cba6f7; /* mauve */
+  --md-accent-fg-color:         #89b4fa; /* blue */
+  --md-typeset-color:           #cdd6f4; /* text */
+  --md-code-bg-color:           #181825; /* mantle */
+  --md-footer-bg-color:         #11111b; /* crust */
+  --md-default-fg-color--light: #a6adc8;
+  --md-default-fg-color--lighter: #9399b2;
+  --md-typeset-a-color:         #89b4fa; /* link color */
+}

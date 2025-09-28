@@ -97,8 +97,11 @@ plugins:
   - glightbox
   - ezlinks
   - obsidian-support
+  - git-revision-date-localized
   - kroki:
-      server_url: https://kroki.io
+      ServerURL: https://kroki.io
+      EnableBlockDiag: true
+      EnableMermaid: true
 
 
 markdown_extensions:
@@ -120,7 +123,7 @@ markdown_extensions:
 
   # ── Code highlighting ──────────────────────────────────
   - pymdownx.highlight:
-      linenums: true          # Hiển thị số dòng mặc định
+      # linenums: true          # Hiển thị số dòng mặc định
       anchor_linenums: true   # Cho phép link tới từng dòng
       line_spans: __span
       pygments_lang_class: true
@@ -197,9 +200,10 @@ extra:
 
 extra_css:
   - assets/stylesheets/heading.css
+  # - assets/stylesheets/catppuccin.css
+  # - assets/stylesheets/theme.css
 
 validation:
   omitted_files: warn
   absolute_links: warn
   unrecognized_links: warn
-
