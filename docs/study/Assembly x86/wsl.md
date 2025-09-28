@@ -329,7 +329,7 @@ cd ~                 # /home/username/
 
 ## Setup task.json AT&T 32 bit
 
-``` json title="task.json" linenums="1" hl_lines="0"
+``` json title="task.json At&t 32 bits" linenums="1" hl_lines="0"
 {
   "version": "2.0.0",
   "tasks": [
@@ -391,4 +391,69 @@ cd ~                 # /home/username/
   ]
 }
 
+```
+
+``` json title="task.json Intel 32 bits" linenums="1" hl_lines="0"
+  {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build & Run NASM (elf32)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "nasm -f elf32 '${file}' -o '${fileDirname}/${fileBasenameNoExtension}.o' && ld -m elf_i386 '${fileDirname}/${fileBasenameNoExtension}.o' -o '${fileDirname}/${fileBasenameNoExtension}' && '${fileDirname}/${fileBasenameNoExtension}'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
+
+```
+
+``` json title="task.json khác" linenums="1" hl_lines="0"
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run NASM (elf32)",
+            "type": "shell",
+            "command": "nasm",
+            "args": [
+                "-f", "elf32",
+                "${file}",
+                "-o", "${fileDirname}/${fileBasenameNoExtension}.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Link (ld)",
+            "type": "shell",
+            "command": "ld",
+            "args": [
+                "-m", "elf_i386",
+                "${fileDirname}/${fileBasenameNoExtension}.o",
+                "-o", "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "dependsOn": "Build and Run NASM (elf32)",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run program",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "dependsOn": "Link (ld)",
+            "problemMatcher": []
+        }
+    ]
+}
 ```
