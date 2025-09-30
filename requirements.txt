@@ -8,3 +8,8 @@ mkdocs-kroki-plugin
 mkdocs-wikilinks-plugin
 mkdocs-obsidian-support-plugin
 mkdocs-git-revision-date-localized-plugin
+
+mkdocs-callouts
+mkdocs-obsidian-bridge
+mkdocs-obsidian-interactive-graph-plugin
+overrides

@@ -65,7 +65,7 @@ theme:
     # - header.autohide
 plugins:
   - search:
-      lang: [en, vi]
+      lang: [en] #, vi
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       pipeline:
         - stemmer
@@ -87,17 +87,19 @@ plugins:
         kwds:
           case: lower
       tags_slugify_format: "tag:{slug}"
-  - minify:
-      minify_html: true
-      minify_css: true
-      minify_js: true
-      htmlmin_opts:
-        remove_comments: true
-  - macros
+  # - minify:
+  #     minify_html: true
+  #     minify_css: true
+  #     minify_js: true
+  #     htmlmin_opts:
+  #       remove_comments: true
+  # - macros
   - glightbox
+  - obsidian-interactive-graph
   - ezlinks
   - obsidian-support
-  - git-revision-date-localized
+
+  # - git-revision-date-localized
   - kroki:
       ServerURL: https://kroki.io
       EnableBlockDiag: true
@@ -133,9 +135,9 @@ markdown_extensions:
         - name: mermaid       # Vẽ biểu đồ Mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.snippets:        # Import file/snippet chung
-      auto_append:
-        - includes/mkdocs.md
+  # - pymdownx.snippets:        # Import file/snippet chung
+  #     auto_append:
+  #       - includes/mkdocs.md
 
   # ── Text formatting ────────────────────────────────────
   - pymdownx.betterem:
@@ -202,6 +204,15 @@ extra_css:
   - assets/stylesheets/heading.css
   # - assets/stylesheets/catppuccin.css
   # - assets/stylesheets/theme.css
+  - assets/stylesheets/obsidian_tags.css
+  - assets/stylesheets/interactive_graph.css
+
+extra_javascript:
+  - https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js
+  - https://fastly.jsdelivr.net/npm/echarts/dist/echarts.min.js
+  - assets/javascripts/obsidian_tags.js
+  - assets/javascripts/interactive_graph.js
+
 
 validation:
   omitted_files: warn
