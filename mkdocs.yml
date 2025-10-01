@@ -42,7 +42,7 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.footer
-    - navigation.expand
+    # - navigation.expand
     # Content features
     - toc.follow
     # Search
@@ -97,7 +97,7 @@ plugins:
   - glightbox
   - obsidian-interactive-graph
   - ezlinks
-  - obsidian-support
+  # - obsidian-support
 
   # - git-revision-date-localized
   - kroki:
@@ -202,6 +202,7 @@ extra:
 
 extra_css:
   - assets/stylesheets/heading.css
+  # - assets/stylesheets/horizen.css
   # - assets/stylesheets/catppuccin.css
   # - assets/stylesheets/theme.css
   - assets/stylesheets/obsidian_tags.css

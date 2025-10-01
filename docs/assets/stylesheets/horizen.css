@@ -1,0 +1,49 @@
+/* Common hr styles for MkDocs */
+.md-content hr {
+    position: relative;
+    overflow: initial;
+    border: none;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+        transparent 0%,
+        #B68D40 16%,
+        #E1A95F 46%,
+        transparent 48%,
+        transparent 52%,
+        #E1A95F 54%,
+        #B68D40 84%,
+        transparent 100%);
+    margin-block-start: 2em;
+    margin-block-end: 1.2em;
+}
+
+/* Neon ✧ star after hr */
+.md-content hr::after {
+    content: '✧';
+    display: inline-block;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFC800 !important;
+
+    /* Remove unwanted borders */
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    /* Ensure consistent rendering */
+    line-height: 1;
+    font-family: "Segoe UI Symbol", "Noto Sans Symbols", sans-serif;
+
+    /* Yellow glow effect */
+    text-shadow:
+        0 0 3px #FFC800,
+        0 0 6px #FFD700,
+        0 0 12px #FFA500;
+}
