@@ -1,5 +1,0 @@
-# Assembly
-
-## Setup WSL
-
-## Resources
