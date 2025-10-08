@@ -1,5 +1,5 @@
 site_name: Hope Docs
-site_url: https://vuongdat67.github.io/my-mkdocs/
+site_url: https://vuongdat67.github.io/mkdocs/
 repo_url: https://github.com/vuongdat67/mkdocs
 repo_name: vuongdat67/mkdocs
 edit_uri: edit/main/docs/
@@ -34,7 +34,7 @@ theme:
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
-    - navigation.tracking
+    # - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
