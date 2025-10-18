@@ -7,15 +7,22 @@ categories:
     - AI
 tags:
     - AI
+# cover_image: assets/images/AI.png
 ---
 
-# AI Prompt
+# AI Prompt Phần 1
 
+![AI](../../assets/images/AI.png){ width="740" }
+/// caption
+AI Prompt
+///
 These have several prompting for AIs:
 Google 
 Claude
 
+
 <!-- more -->
+
 ## Google Course Prompting AI
 
 ```mermaid

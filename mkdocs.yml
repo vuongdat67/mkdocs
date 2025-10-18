@@ -8,14 +8,16 @@ site_description: Documentation for my project
 copyright: Copyright &copy; 2025 Vuong Thanh Dat
 theme:
   name: material
+  # custom_dir: overrides
   direction: ltr
   language: en
   font:
     text: Inter
-    heading: Noto Sans
-    subheading: Inter
-    meta: Inter
-    code: Fira Code
+    code: JetBrains Mono
+    # heading: Noto Sans
+    # subheading: Inter
+    # meta: Inter
+    # code: Fira Code
   palette: 
     - scheme: default
       toggle:
@@ -89,12 +91,12 @@ plugins:
         kwds:
           case: lower
       tags_slugify_format: "tag:{slug}"
-  # - minify:
-  #     minify_html: true
-  #     minify_css: true
-  #     minify_js: true
-  #     htmlmin_opts:
-  #       remove_comments: true
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
   # - macros
   - glightbox
   - obsidian-interactive-graph
@@ -114,6 +116,7 @@ plugins:
 
 markdown_extensions:
   # ── Essential extensions ───────────────────────────────
+  - pymdownx.blocks.tab
   - footnotes
   - def_list
   - abbr

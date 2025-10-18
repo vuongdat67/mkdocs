@@ -10,9 +10,9 @@ tags:
 ---
 
 
-# Prompt AI Chuyên Ngành An Toàn Thông Tin - Sinh Viên
-![AI](../../assets/images/AI.png)
-abcbcbcbc
+# Prompt AI Phần 2
+
+
 <!-- more -->
 **Tiếng Việt**
 
