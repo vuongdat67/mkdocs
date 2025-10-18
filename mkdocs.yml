@@ -34,6 +34,7 @@ theme:
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
+    # - navigation.instant.preview
     # - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -45,6 +46,7 @@ theme:
     # - navigation.expand
     # Content features
     - toc.follow
+    # - toc.integrate
     # Search
     - search.suggest
     - search.highlight
@@ -65,7 +67,7 @@ theme:
     # - header.autohide
 plugins:
   - search:
-      lang: [en] #, vi
+      lang: [en, vi] #, vi
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       pipeline:
         - stemmer
@@ -97,13 +99,17 @@ plugins:
   - glightbox
   - obsidian-interactive-graph
   - ezlinks
+  - gen-files:
+      scripts:
+        - scripts/gen_pages.py
+  - literate-nav
   # - obsidian-support
 
   # - git-revision-date-localized
-  - kroki:
-      ServerURL: https://kroki.io
-      EnableBlockDiag: true
-      EnableMermaid: true
+  # - kroki:
+  #     ServerURL: https://kroki.io
+  #     EnableBlockDiag: true
+  #     EnableMermaid: true
 
 
 markdown_extensions:
@@ -202,6 +208,7 @@ extra:
 
 extra_css:
   - assets/stylesheets/heading.css
+  - assets/stylesheets/customize.css
   # - assets/stylesheets/horizen.css
   # - assets/stylesheets/catppuccin.css
   # - assets/stylesheets/theme.css

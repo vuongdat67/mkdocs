@@ -13,3 +13,5 @@ mkdocs-callouts
 mkdocs-obsidian-bridge
 mkdocs-obsidian-interactive-graph-plugin
 overrides
+mkdocs-gen-files 
+mkdocs-literate-nav

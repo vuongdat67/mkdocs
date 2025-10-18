@@ -10,4 +10,4 @@ authors:
 ---
 # Nội dung bài
 
-
+![Mountain](../../assets/images/Mountain.png)
