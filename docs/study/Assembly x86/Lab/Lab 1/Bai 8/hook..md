@@ -1,71 +1,77 @@
-# Hook
+---
+title: hook dll
+tags: [reverse, hooking, PE, notepad]
+---
 
-```cpp title="hook.cpp" linenums="1"
-#include <windows.h>
+??? note "Code"
 
-#pragma comment(lib, "user32.lib")
+    
+    ```cpp title="hook.cpp" linenums="1"
+    #include <windows.h>
 
-typedef BOOL(WINAPI* WriteFile_t)(HANDLE, LPCVOID, DWORD, LPDWORD, LPOVERLAPPED);
-WriteFile_t OriginalWriteFile = NULL;
+    #pragma comment(lib, "user32.lib")
 
-BOOL WINAPI HookedWriteFile(HANDLE hFile, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite,
-    LPDWORD lpNumberOfBytesWritten, LPOVERLAPPED lpOverlapped) {
-    MessageBoxW(NULL, L"23520281", L"MSSV", MB_OK);
-    return OriginalWriteFile(hFile, lpBuffer, nNumberOfBytesToWrite,
-        lpNumberOfBytesWritten, lpOverlapped);
-}
+    typedef BOOL(WINAPI* WriteFile_t)(HANDLE, LPCVOID, DWORD, LPDWORD, LPOVERLAPPED);
+    WriteFile_t OriginalWriteFile = NULL;
 
-BOOL HookIAT() {
-    HMODULE hModule = GetModuleHandle(NULL);
-    if (!hModule) return FALSE;
+    BOOL WINAPI HookedWriteFile(HANDLE hFile, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite,
+        LPDWORD lpNumberOfBytesWritten, LPOVERLAPPED lpOverlapped) {
+        MessageBoxW(NULL, L"23520281", L"MSSV", MB_OK);
+        return OriginalWriteFile(hFile, lpBuffer, nNumberOfBytesToWrite,
+            lpNumberOfBytesWritten, lpOverlapped);
+    }
 
-    PIMAGE_DOS_HEADER pDosHeader = (PIMAGE_DOS_HEADER)hModule;
-    if (pDosHeader->e_magic != IMAGE_DOS_SIGNATURE) return FALSE;
+    BOOL HookIAT() {
+        HMODULE hModule = GetModuleHandle(NULL);
+        if (!hModule) return FALSE;
 
-    PIMAGE_NT_HEADERS pNtHeaders = (PIMAGE_NT_HEADERS)((BYTE*)hModule + pDosHeader->e_lfanew);
-    if (pNtHeaders->Signature != IMAGE_NT_SIGNATURE) return FALSE;
+        PIMAGE_DOS_HEADER pDosHeader = (PIMAGE_DOS_HEADER)hModule;
+        if (pDosHeader->e_magic != IMAGE_DOS_SIGNATURE) return FALSE;
 
-    DWORD importRVA = pNtHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress;
-    if (!importRVA) return FALSE;
+        PIMAGE_NT_HEADERS pNtHeaders = (PIMAGE_NT_HEADERS)((BYTE*)hModule + pDosHeader->e_lfanew);
+        if (pNtHeaders->Signature != IMAGE_NT_SIGNATURE) return FALSE;
 
-    PIMAGE_IMPORT_DESCRIPTOR pImportDesc = (PIMAGE_IMPORT_DESCRIPTOR)((BYTE*)hModule + importRVA);
+        DWORD importRVA = pNtHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress;
+        if (!importRVA) return FALSE;
 
-    while (pImportDesc->Name) {
-        LPCSTR dllName = (LPCSTR)((BYTE*)hModule + pImportDesc->Name);
+        PIMAGE_IMPORT_DESCRIPTOR pImportDesc = (PIMAGE_IMPORT_DESCRIPTOR)((BYTE*)hModule + importRVA);
 
-        if (_stricmp(dllName, "KERNEL32.dll") == 0) {
-            PIMAGE_THUNK_DATA pThunk = (PIMAGE_THUNK_DATA)((BYTE*)hModule + pImportDesc->FirstThunk);
-            PIMAGE_THUNK_DATA pOrigThunk = (PIMAGE_THUNK_DATA)((BYTE*)hModule + pImportDesc->OriginalFirstThunk);
+        while (pImportDesc->Name) {
+            LPCSTR dllName = (LPCSTR)((BYTE*)hModule + pImportDesc->Name);
 
-            while (pThunk->u1.Function && pOrigThunk->u1.Function) {
-                if (!(pOrigThunk->u1.Ordinal & IMAGE_ORDINAL_FLAG)) {
-                    PIMAGE_IMPORT_BY_NAME pImport = (PIMAGE_IMPORT_BY_NAME)((BYTE*)hModule + pOrigThunk->u1.AddressOfData);
+            if (_stricmp(dllName, "KERNEL32.dll") == 0) {
+                PIMAGE_THUNK_DATA pThunk = (PIMAGE_THUNK_DATA)((BYTE*)hModule + pImportDesc->FirstThunk);
+                PIMAGE_THUNK_DATA pOrigThunk = (PIMAGE_THUNK_DATA)((BYTE*)hModule + pImportDesc->OriginalFirstThunk);
 
-                    if (strcmp(pImport->Name, "WriteFile") == 0) {
-                        DWORD oldProtect;
-                        VirtualProtect(&pThunk->u1.Function, sizeof(DWORD), PAGE_READWRITE, &oldProtect);
+                while (pThunk->u1.Function && pOrigThunk->u1.Function) {
+                    if (!(pOrigThunk->u1.Ordinal & IMAGE_ORDINAL_FLAG)) {
+                        PIMAGE_IMPORT_BY_NAME pImport = (PIMAGE_IMPORT_BY_NAME)((BYTE*)hModule + pOrigThunk->u1.AddressOfData);
 
-                        OriginalWriteFile = (WriteFile_t)pThunk->u1.Function;
-                        pThunk->u1.Function = (DWORD_PTR)HookedWriteFile;
+                        if (strcmp(pImport->Name, "WriteFile") == 0) {
+                            DWORD oldProtect;
+                            VirtualProtect(&pThunk->u1.Function, sizeof(DWORD), PAGE_READWRITE, &oldProtect);
 
-                        VirtualProtect(&pThunk->u1.Function, sizeof(DWORD), oldProtect, &oldProtect);
-                        return TRUE;
+                            OriginalWriteFile = (WriteFile_t)pThunk->u1.Function;
+                            pThunk->u1.Function = (DWORD_PTR)HookedWriteFile;
+
+                            VirtualProtect(&pThunk->u1.Function, sizeof(DWORD), oldProtect, &oldProtect);
+                            return TRUE;
+                        }
                     }
+                    pThunk++;
+                    pOrigThunk++;
                 }
-                pThunk++;
-                pOrigThunk++;
             }
+            pImportDesc++;
         }
-        pImportDesc++;
+        return FALSE;
     }
-    return FALSE;
-}
 
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved) {
-    if (reason == DLL_PROCESS_ATTACH) {
-        DisableThreadLibraryCalls(hModule);
-        HookIAT();
+    BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved) {
+        if (reason == DLL_PROCESS_ATTACH) {
+            DisableThreadLibraryCalls(hModule);
+            HookIAT();
+        }
+        return TRUE;
     }
-    return TRUE;
-}
-```
+    ```
