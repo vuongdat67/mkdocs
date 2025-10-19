@@ -13,7 +13,7 @@ theme:
   language: en
   font:
     text: Inter
-    code: JetBrains Mono
+    #code: JetBrains Mono
     # heading: Noto Sans
     # subheading: Inter
     # meta: Inter
@@ -212,9 +212,9 @@ extra:
 
 extra_css:
   - assets/stylesheets/heading.css
-  - assets/stylesheets/customize.css
-  - css/custom.css
-  - css/insiders.css
+  #- assets/stylesheets/customize.css
+  #- css/custom.css
+  #- css/insiders.css
   # - assets/stylesheets/horizen.css
   # - assets/stylesheets/catppuccin.css
   # - assets/stylesheets/theme.css
@@ -232,3 +232,4 @@ validation:
   omitted_files: warn
   absolute_links: warn
   unrecognized_links: warn
+
