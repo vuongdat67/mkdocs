@@ -1,7 +1,7 @@
 /* Heading màu sắc riêng */
 .md-typeset h1 {
   color: #b22252; /* hồng */
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .md-typeset h2 {
@@ -43,7 +43,7 @@
   background: var(--md-default-bg-color--lighter, #f5f5f5);
 }
 
-.md-post__cover {
+/* .md-post__cover {
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -55,7 +55,7 @@
 }
 .md-post__cover img:hover {
   transform: scale(1.42);
-}
+} */
 
 /* .md-post__cover {
   display: flex;
@@ -81,3 +81,5 @@
   height: auto;
   display: block;
 } */
+
+
