@@ -104,6 +104,7 @@ plugins:
   - gen-files:
       scripts:
         - scripts/gen_pages.py
+        - scripts/gen_home.py
   - literate-nav
   # - obsidian-support
 
@@ -212,6 +213,8 @@ extra:
 extra_css:
   - assets/stylesheets/heading.css
   - assets/stylesheets/customize.css
+  - css/custom.css
+  - css/insiders.css
   # - assets/stylesheets/horizen.css
   # - assets/stylesheets/catppuccin.css
   # - assets/stylesheets/theme.css

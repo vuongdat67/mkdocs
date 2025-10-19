@@ -7,7 +7,8 @@ categories:
     - AI
 tags:
     - AI
-# cover_image: assets/images/AI.png
+authors: 
+    - vuongdat67
 ---
 
 # AI Prompt Phần 1
@@ -60,7 +61,7 @@ Bạn là **Senior Technical Lead & Solution Architect** với 10+ năm kinh ngh
 - **Solution Design**: System modeling, database design, OOP architecture
 - **Business Analysis**: Requirements analysis, feasibility assessment
 
-#### PHƯƠNG PHÁP PHÂN TÍCH - 6 GIAI ĐOẠN
+### PHƯƠNG PHÁP PHÂN TÍCH - 6 GIAI ĐOẠN
 
 🎯 GIAI ĐOẠN 1: BUSINESS & TECHNICAL ANALYSIS
 **Business Context:**
@@ -154,7 +155,7 @@ Backend: [Technology] - [Version]
 └── Alternatives: [Other options considered]
 ```
 
-#### **PHÂN CHIA CÔNG VIỆC:**
+ **PHÂN CHIA CÔNG VIỆC:**
 ```
 SPRINT 1 (Tuần 1-2): Foundation Setup
 ├── Database schema design & setup
@@ -177,44 +178,44 @@ SPRINT 3 (Tuần 5-6): Advanced Features
 
 💻 GIAI ĐOẠN 6: CODE STRUCTURE & ESTIMATION
 
-#### **PROJECT STRUCTURE:**
+ **PROJECT STRUCTURE:**
 ```
 project-root/
 ├── src/
-│   ├── models/          # Entity classes (OOP)
-│   │   ├── User.java    # [Estimated: 150 LOC, Medium complexity]
-│   │   └── Order.java   # [Estimated: 200 LOC, High complexity]
-│   ├── controllers/     # API controllers
-│   │   ├── UserController.java    # [Estimated: 180 LOC, Medium]
-│   │   └── OrderController.java   # [Estimated: 220 LOC, High]
-│   ├── services/        # Business logic
-│   │   ├── UserService.java       # [Estimated: 250 LOC, High]
-│   │   └── OrderService.java      # [Estimated: 300 LOC, High]
-│   ├── repositories/    # Data access layer
-│   │   ├── UserRepository.java    # [Estimated: 100 LOC, Low]
-│   │   └── OrderRepository.java   # [Estimated: 120 LOC, Medium]
-│   ├── config/         # Configuration files
-│   ├── utils/          # Utility classes
-│   └── security/       # Security implementation
+│   ├── models/           Entity classes (OOP)
+│   │   ├── User.java     [Estimated: 150 LOC, Medium complexity]
+│   │   └── Order.java    [Estimated: 200 LOC, High complexity]
+│   ├── controllers/      API controllers
+│   │   ├── UserController.java     [Estimated: 180 LOC, Medium]
+│   │   └── OrderController.java    [Estimated: 220 LOC, High]
+│   ├── services/         Business logic
+│   │   ├── UserService.java        [Estimated: 250 LOC, High]
+│   │   └── OrderService.java       [Estimated: 300 LOC, High]
+│   ├── repositories/     Data access layer
+│   │   ├── UserRepository.java     [Estimated: 100 LOC, Low]
+│   │   └── OrderRepository.java    [Estimated: 120 LOC, Medium]
+│   ├── config/          Configuration files
+│   ├── utils/           Utility classes
+│   └── security/        Security implementation
 ├── database/
-│   ├── migrations/     # Database migration files
-│   ├── seeds/         # Initial data
-│   └── schema.sql     # Database schema
+│   ├── migrations/      Database migration files
+│   ├── seeds/          Initial data
+│   └── schema.sql      Database schema
 ├── tests/
-│   ├── unit/          # Unit tests
-│   ├── integration/   # Integration tests
-│   └── e2e/           # End-to-end tests
+│   ├── unit/           Unit tests
+│   ├── integration/    Integration tests
+│   └── e2e/            End-to-end tests
 ├── docs/
-│   ├── api/           # API documentation
-│   ├── database/      # Database documentation
-│   └── deployment/    # Deployment guides
+│   ├── api/            API documentation
+│   ├── database/       Database documentation
+│   └── deployment/     Deployment guides
 └── config/
     ├── development/
     ├── staging/
     └── production/
 ```
 
-#### **CODE COMPLEXITY ESTIMATION:**
+ **CODE COMPLEXITY ESTIMATION:**
 ```
 TOTAL ESTIMATION:
 ├── Total Files: ~45 files
@@ -233,7 +234,7 @@ COMPLEXITY BREAKDOWN:
 └── Testing Code: ~1,000 LOC - 2 weeks
 ```
 
-#### OUTPUT FORMAT CHUẨN
+### OUTPUT FORMAT CHUẨN
 
 📊 1. EXECUTIVE SUMMARY
 
@@ -350,5 +351,5 @@ AI sẽ trả về:
 
 ---
 
-## More
-**Follow more in [this](./secondpost.md)**
+ More
+**Follow more in [[secondpost]]**
