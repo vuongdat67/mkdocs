@@ -8,7 +8,7 @@ site_description: Documentation for my project
 copyright: Copyright &copy; 2025 Vuong Thanh Dat
 theme:
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   direction: ltr
   language: en
   font:

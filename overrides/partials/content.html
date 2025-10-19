@@ -1,0 +1,50 @@
+<!-- Tags -->
+{% include "partials/tags.html" %}
+
+<!-- Actions -->
+{% include "partials/actions.html" %}
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+{% if "\u003ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+
+<!-- Cover image -->
+{% if page.meta.cover_image %}
+  <figure class="md-post__cover">
+    <img
+      src="{% if '/' in page.meta.cover_image %}
+              {{ page.meta.cover_image | url }}
+            {% else %}
+              {{ 'assets/images/' ~ page.meta.cover_image | url }}
+            {% endif %}"
+      alt="{{ page.title }}"
+    />
+  </figure>
+{% endif %}
+
+<!-- {% if page.meta.cover_image %}
+  <figure class="md-post__cover">
+    <a href="{{ page.meta.cover_image | url }}"
+       data-glightbox="title: {{ page.title }}">
+      <img src="{{ page.meta.cover_image | url }}"
+           alt="{{ page.title }}"
+           loading="lazy" />
+    </a>
+  </figure>
+{% endif %} -->
+
+<!-- Page content -->
+{{ page.content }}
+
+<!-- Source file information -->
+{% include "partials/source-file.html" %}
+
+<!-- Was this page helpful? -->
+{% include "partials/feedback.html" %}
+
+<!-- Comment system -->
+{% include "partials/comments.html" %}

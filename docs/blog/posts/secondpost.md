@@ -7,11 +7,11 @@ categories:
     - AI
 tags:
     - AI
+cover_image: assets/images/AI.png
 ---
 
 
 # Prompt AI Phần 2
-
 
 <!-- more -->
 **Tiếng Việt**
