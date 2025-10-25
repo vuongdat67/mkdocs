@@ -16,10 +16,6 @@ theme:
   language: en
   font:
     text: Inter
-    #code: JetBrains Mono
-    # heading: Noto Sans
-    # subheading: Inter
-    # meta: Inter
     # code: Fira Code
   palette: 
     - scheme: default
@@ -36,11 +32,11 @@ theme:
       accent: green
   features:
     # Core navigation
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.instant.preview
-    # - navigation.tracking
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
@@ -72,12 +68,13 @@ theme:
     # - header.autohide
 plugins:
   - search:
-      lang: [en, vi] #, vi
+      lang: [en, vi] 
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
       pipeline:
         - stemmer
         - stopWordFilter
         - trimmer
+  - callouts
   - blog:
       blog_dir: blog
       blog_toc: true
@@ -101,13 +98,19 @@ plugins:
       htmlmin_opts:
         remove_comments: true
   # - macros
-  - glightbox
+  - glightbox:
+      touchNavigation: true
+      loop: true
+      height: auto
+      width: 80%
+
   - obsidian-interactive-graph
   - ezlinks
-  - gen-files:
-      scripts:
-        - scripts/gen_pages.py
-        - scripts/gen_home.py
+  # - autorefs
+  # - gen-files:
+  #     scripts:
+  #       - scripts/gen_pages.py
+  #       - scripts/gen_home.py
   - literate-nav
   # - obsidian-support
 
@@ -119,7 +122,6 @@ plugins:
 
 
 markdown_extensions:
-  # ── Essential extensions ───────────────────────────────
   - pymdownx.blocks.tab
   - footnotes
   - def_list
@@ -128,67 +130,52 @@ markdown_extensions:
   - md_in_html
   - tables
   - pymdownx.blocks.caption
-  - admonition          # Callouts (map từ Obsidian)
-  - pymdownx.details    # Collapsible sections (Obs collapsible)
+  - admonition         
+  - pymdownx.details  
   - toc:
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
-
-  # ── Code highlighting ──────────────────────────────────
   - pymdownx.highlight:
-      # linenums: true          # Hiển thị số dòng mặc định
-      anchor_linenums: true   # Cho phép link tới từng dòng
+      # linenums: true          
+      anchor_linenums: true   
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.superfences:     # Hỗ trợ code block nâng cao
+  - pymdownx.superfences:     
       custom_fences:
-        - name: mermaid       # Vẽ biểu đồ Mermaid
+        - name: mermaid      
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   # - pymdownx.snippets:        # Import file/snippet chung
   #     auto_append:
   #       - includes/mkdocs.md
-
-  # ── Text formatting ────────────────────────────────────
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.caret        # ^caret^
-  - pymdownx.mark         # ==highlight==
-  - pymdownx.tilde        # ~~strike~~
-  - pymdownx.keys         # ++ctrl+c++
-  - pymdownx.smartsymbols # (c) -> ©, -- -> –, -> -> →
-
-  # ── Lists and tasks ────────────────────────────────────
+  - pymdownx.caret       
+  - pymdownx.mark        
+  - pymdownx.tilde       
+  - pymdownx.keys         
+  - pymdownx.smartsymbols 
   - pymdownx.tasklist:
-      custom_checkbox: true   # Todo list giống Obsidian
+      custom_checkbox: true  
   - sane_lists
-
-  # ── Tabs ───────────────────────────────────────────────
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
-
-  # ── Math and links ─────────────────────────────────────
   - pymdownx.arithmatex:
-      generic: true           # MathJax/KaTeX
-  - pymdownx.magiclink:       # Tự nhận link, issue, PR
+      generic: true           
+  - pymdownx.magiclink:       
       normalize_issue_symbols: true
       repo_url_shorthand: true
-
-  # ── Emojis ─────────────────────────────────────────────
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-  # ── Misc ───────────────────────────────────────────────
-  - nl2br                 # Xuống dòng tự động khi gặp \n
-
+  - nl2br               
 
 extra:
   social:
@@ -199,7 +186,6 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/yourprofile
   generator: false
-    # Add security headers
   analytics:
     feedback:
       title: Was this page helpful?
@@ -215,12 +201,10 @@ extra:
 
 extra_css:
   - assets/stylesheets/heading.css
-  #- assets/stylesheets/customize.css
-  # - css/custom.css
-  # - css/insiders.css
-  # - assets/stylesheets/horizen.css
-  # - assets/stylesheets/catppuccin.css
-  # - assets/stylesheets/theme.css
+  - assets/stylesheets/background.css
+  - assets/stylesheets/admonition.css
+  - assets/stylesheets/table.css
+
   - assets/stylesheets/obsidian_tags.css
   - assets/stylesheets/interactive_graph.css
 
@@ -236,3 +220,10 @@ validation:
   absolute_links: warn
   unrecognized_links: warn
 
+# nav:
+#   - 🏡 Home: index.md
+#   - 📒 Blog:
+#       - Blog Home: blog/index.md
+#   - ✍️ Study: 
+#       - Study: study/ 
+#   - 🤖 Tags: tags.md
