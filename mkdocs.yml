@@ -75,6 +75,7 @@ plugins:
         - stopWordFilter
         - trimmer
   - callouts
+  - markdown-exec
   - blog:
       blog_dir: blog
       blog_toc: true
