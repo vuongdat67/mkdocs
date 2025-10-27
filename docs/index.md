@@ -321,29 +321,33 @@ hide_comment: true
 
 <script>
   function updateGreeting() {
-    const el = document.getElementById('greeting-text');
-    if (!el) {
-      setTimeout(updateGreeting, 100);
-      return;
-    }
+  const el = document.getElementById('greeting-text');
+  if (!el) {
+    setTimeout(updateGreeting, 100);
+    return;
+  }
 
     const hour = new Date().getHours();
     const greetings = [
-      [0, 5, "Đêm khuya rồi, hãy nghỉ ngơi nhé 🌙"],
-      [5, 7, "Chào buổi sáng sớm 🌅"],
-      [7, 9, "Chào buổi sáng, chúc bạn ngày mới tốt lành ☀️"],
-      [9, 11, "Buổi sáng tốt lành, tập trung làm việc nhé ✨"],
-      [11, 13, "Trưa rồi, nghỉ ngơi tí nhé 🍲"],
-      [13, 15, "Buổi chiều vui vẻ, tiếp tục phấn đấu ☕"],
-      [15, 18, "Chiều tốt lành, đừng quên uống nước nhé 🌤️"],
-      [18, 20, "Chiều tà rồi, thư giãn chút thôi 🌆"],
-      [20, 22, "Tối tốt lành, tận hưởng thời gian yên tĩnh 🌃"],
-      [22, 24, "Khuya rồi, ngủ sớm nhé 🌠"]
+      [0, 5, "Đêm khuya rồi, hãy nghỉ ngơi nhé", "🌙"],
+      [5, 7, "Chào buổi sáng sớm", "🌅"],
+      [7, 9, "Chào buổi sáng, chúc bạn ngày mới tốt lành", "☀️"],
+      [9, 11, "Buổi sáng tốt lành, tập trung làm việc nhé", "✨"],
+      [11, 13, "Trưa rồi, nghỉ ngơi tí nhé", "🍲"],
+      [13, 15, "Buổi chiều vui vẻ, tiếp tục phấn đấu", "☕"],
+      [15, 18, "Chiều tốt lành, đừng quên uống nước nhé", "🌤️"],
+      [18, 20, "Chiều tà rồi, thư giãn chút thôi", "🌆"],
+      [20, 22, "Tối tốt lành, tận hưởng thời gian yên tĩnh", "🌃"],
+      [22, 24, "Khuya rồi, ngủ sớm nhé", "🌠"]
     ];
 
-    const greeting = greetings.find(([start, end]) => hour >= start && hour < end);
-    el.textContent = greeting ? greeting[2] : "Xin chào! 👋";
+  const greeting = greetings.find(([start, end]) => hour >= start && hour < end);
+  if (greeting) {
+    el.innerHTML = `${greeting[2]} <span style="filter: none; -webkit-text-fill-color: initial;">${greeting[3]}</span>`;
+  } else {
+    el.innerHTML = 'Xin chào! <span style="filter: none; -webkit-text-fill-color: initial;">👋</span>';
   }
+}
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', updateGreeting);
