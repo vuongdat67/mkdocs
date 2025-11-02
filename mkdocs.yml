@@ -103,7 +103,7 @@ plugins:
       # height: auto
       # width: 80%
 
-  - obsidian-interactive-graph
+  # - obsidian-interactive-graph
   - ezlinks
 
   - git-revision-date-localized
