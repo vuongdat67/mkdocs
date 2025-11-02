@@ -16,3 +16,4 @@ overrides
 #mkdocs-gen-files 
 #mkdocs-literate-nav
 markdown-exec[ansi]
+mkdocs-panzoom-plugin
