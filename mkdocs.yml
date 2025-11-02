@@ -28,7 +28,7 @@ theme:
       accent: green
   features:
     # Core navigation
-    - navigation.instant
+    # - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.instant.preview
