@@ -88,6 +88,19 @@ draft: false
 | `tablea` | Table với column alignment (left/center/right) |
 | `tables` | Sortable table (có thể sắp xếp) |
 
+
+**center table**
+
+<div class="center-table" markdown>
+
+|  Method  |   Description   |
+|:--------:|:---------------:|
+|  `GET`   | Fetch resource  |
+|  `PUT`   | Update resource |
+| `DELETE` | Delete resource |
+
+</div>
+
 ## 🔘 Buttons & Links
 
 | Keyword | Chức năng |
