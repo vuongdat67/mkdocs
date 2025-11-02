@@ -13,10 +13,14 @@ authors:
 
 # AI Prompt Phần 1
 
-![AI](../../assets/images/AI.png){ width="740" }
+[![AI]](./firstpost.md)
+
+[AI]: ../../assets/images/AI.png
+<!-- ![AI](../../assets/images/AI.png){ width="740" } -->
 /// caption
 AI Prompt
 ///
+
 These have several prompting for AIs:
 Google 
 Claude

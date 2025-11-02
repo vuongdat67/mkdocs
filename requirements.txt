@@ -11,8 +11,8 @@ mkdocs-git-revision-date-localized-plugin
 
 mkdocs-callouts
 mkdocs-obsidian-bridge
-mkdocs-obsidian-interactive-graph-plugin
+#mkdocs-obsidian-interactive-graph-plugin
 overrides
-mkdocs-gen-files 
-mkdocs-literate-nav
+#mkdocs-gen-files 
+#mkdocs-literate-nav
 markdown-exec[ansi]

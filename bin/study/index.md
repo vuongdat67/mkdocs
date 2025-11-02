@@ -1,7 +1,7 @@
 ---
 title: Khu vực học tập
 hide:
-  # - navigation
+  - navigation
   - toc
 ---
 
@@ -82,7 +82,7 @@ Tổng hợp kiến thức IT, mạng máy tính, an toàn thông tin và các m
     
     [:octicons-arrow-right-24: Security Network/](Security Network/)
 
--   :simple-assemblyscript: __Assembly x86__
+-   :material-assembly-variant:{ .lg .middle } __Assembly x86__
 
     ---
     Low-level programming, Reverse Engineering

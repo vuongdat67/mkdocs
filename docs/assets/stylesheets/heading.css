@@ -1,15 +1,18 @@
 /* Heading màu sắc riêng */
 .md-typeset h1 {
-  color: #b22252; /* hồng */
+  /* color: #b22252;  */
+  color: #f86790; 
   font-weight: bold;
 }
 
 .md-typeset h2 {
-  color: #3f8fff; /* xanh indigo */
+  /* color: #3f8fff;  */
+    color: #fab387;
 }
 
 .md-typeset h3 {
-  color: #009688; /* teal */
+  /* color: #009688;  */
+    color: #a6e3a1;
 }
 
  .md-typeset h4 {
@@ -23,6 +26,9 @@
 .md-typeset h6 {
   color: #57c7ff; 
 }
+
+
+
 
 
 /* adjust the weight of title */

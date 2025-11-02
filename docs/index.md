@@ -397,7 +397,7 @@ hide_comment: true
 
     ---
     - [Chưa có]()
-    - [Tham khảo](references/index.md)
+    - [Tham khảo]()
     - [Chưa có]()
     - [Chưa có]()
 

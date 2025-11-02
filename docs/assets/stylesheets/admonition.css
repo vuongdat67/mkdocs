@@ -1,11 +1,11 @@
-/* :root {
+:root {
     --md-text-font: "JetBrains Mono", "LXGW WenKai Screen";
     --md-code-font: "JetBrains Mono";
-} */
+}
 
-/* :root>* {
+:root>* {
     --md-code-hl-color: #4287ff22;
-} */
+}
 
 .md-typeset .admonition,
 .md-typeset details {
@@ -21,9 +21,9 @@
 /* OVERALL: definition, proof, property, extra, section, key-point, advice, not-advice, eg */
 
 
-/* .md-typeset .admonition, .md-typeset details {
+.md-typeset .admonition, .md-typeset details {
   font-size: initial;
-}  */
+} 
 /* definition */
 
 :root {

@@ -8,15 +8,11 @@ site_description: Documentation for my project
 copyright: Copyright &copy; 2025 Vuong Thanh Dat
 theme:
   name: material
-  # color_mode: auto
-  # user_color_mode_toggle: true
-  custom_dir: overrides
-  # custom_dir: templates
   direction: ltr
   language: en
   font:
     text: Inter
-    # code: Fira Code
+    code: Fira Code
   palette: 
     - scheme: default
       toggle:
@@ -50,7 +46,7 @@ theme:
     # - toc.integrate
     # Search
     - search.suggest
-    - search.highlight
+    # - search.highlight
     - search.share
     # Content
     - content.code.copy
@@ -75,7 +71,9 @@ plugins:
         - stopWordFilter
         - trimmer
   - callouts
+  # - mermaid2
   - markdown-exec
+  - panzoom  # Chưa cài plugin này
   - blog:
       blog_dir: blog
       blog_toc: true
@@ -99,23 +97,16 @@ plugins:
       htmlmin_opts:
         remove_comments: true
   # - macros
-  - glightbox:
-      touchNavigation: true
-      loop: true
-      height: auto
-      width: 80%
+  - glightbox
+      # touchNavigation: true
+      # loop: true
+      # height: auto
+      # width: 80%
 
   - obsidian-interactive-graph
   - ezlinks
-  # - autorefs
-  # - gen-files:
-  #     scripts:
-  #       - scripts/gen_pages.py
-  #       - scripts/gen_home.py
-  - literate-nav
-  # - obsidian-support
 
-  # - git-revision-date-localized
+  - git-revision-date-localized
   # - kroki:
   #     ServerURL: https://kroki.io
   #     EnableBlockDiag: true
@@ -205,17 +196,29 @@ extra_css:
   - assets/stylesheets/background.css
   - assets/stylesheets/admonition.css
   - assets/stylesheets/table.css
-
-  - assets/stylesheets/obsidian_tags.css
-  - assets/stylesheets/interactive_graph.css
+  - assets/stylesheets/navlink.css
+  # - assets/stylesheets/obsidian_tags.css
+  # - assets/stylesheets/interactive_graph.css
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  # KaTeX CSS cho Math
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
+  # - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
 
 extra_javascript:
-  - https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js
-  - https://fastly.jsdelivr.net/npm/echarts/dist/echarts.min.js
-  - assets/javascripts/obsidian_tags.js
-  - assets/javascripts/interactive_graph.js
-
-
+  # - https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js
+  # - https://fastly.jsdelivr.net/npm/echarts/dist/echarts.min.js
+  # - assets/javascripts/obsidian_tags.js
+  # - assets/javascripts/interactive_graph.js
+  # Math rendering với KaTeX
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+  - assets/javascripts/katex.js
+  # - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+  # - https://cdn.jsdelivr.net/npm/mermaid-plugin-zoom@1.0.0/dist/mermaid-plugin-zoom.min.js
+  #   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  # - https://cdn.jsdelivr.net/npm/mermaid-plugin-zoom@1.0.0/dist/mermaid-plugin-zoom.min.js
+  # - assets/javascripts/mermaid-zoom-init.js
+  
 validation:
   omitted_files: warn
   absolute_links: warn
@@ -226,5 +229,5 @@ validation:
 #   - 📒 Blog:
 #       - Blog Home: blog/index.md
 #   - ✍️ Study: 
-#       - Study: study/ 
+#       - ... | study/**
 #   - 🤖 Tags: tags.md
