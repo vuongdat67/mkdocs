@@ -211,7 +211,7 @@ extra:
           note: Thanks for your feedback!
 
 extra_css:
-  - assets/stylesheets/heading.css
+  # - assets/stylesheets/heading.css
   - assets/stylesheets/background.css
   - assets/stylesheets/admonition.css
   - assets/stylesheets/table.css
