@@ -1,0 +1,95 @@
+/* Heading màu sắc riêng */
+.md-typeset h1 {
+  /* color: #b22252;  */
+  color: #f3376c; 
+  font-weight: bold;
+}
+
+.md-typeset h2 {
+  /* color: #3f8fff;  */
+    color: #fab387;
+    font-weight: bold;
+}
+
+.md-typeset h3 {
+  /* color: #009688;  */
+    color: #a6e3a1;
+    font-weight: bold;
+}
+
+ .md-typeset h4 {
+  color: #c75e3e; 
+  font-weight: bold;
+}
+
+.md-typeset h5 {
+  color: #d67dff; 
+  font-weight: bold;
+}
+
+.md-typeset h6 {
+  color: #57c7ff; 
+  font-weight: bold;
+}
+
+
+
+
+
+/* adjust the weight of title */
+/* .md-typeset h1, .md-typeset h2 {
+    font-weight: 600;
+}
+
+.md-typeset h3 {
+    font-weight: 500;
+} */
+
+/* auto indexing */
+/* h1 {
+    counter-reset: h2;
+}
+
+h2 {
+    counter-reset: h3;
+}
+
+h3 {
+    counter-reset: h4;
+}
+
+h4 {
+    counter-reset: h5;
+}
+
+h5 {
+    counter-reset: h6;
+}
+
+h2:before {
+    counter-increment: h2;
+    content: counter(h2);
+    margin-right: 0.8rem;
+}
+h3:before {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3);
+    margin-right: 0.8rem;
+}
+h4:before {
+    counter-increment: h4;
+    content: counter(h2) "." counter(h3) "." counter(h4);
+    margin-right: 0.8rem;
+}
+h5:before {
+    counter-increment: h5;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
+    margin-right: 0.8rem;
+}
+h6:before {
+    counter-increment: h6;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6);
+    margin-right: 0.8rem;
+}
+
+ */
