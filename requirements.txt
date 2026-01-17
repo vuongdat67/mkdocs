@@ -17,3 +17,4 @@ overrides
 #mkdocs-literate-nav
 markdown-exec[ansi]
 mkdocs-panzoom-plugin
+mkdocs-quiz

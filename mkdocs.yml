@@ -24,7 +24,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-      primary: teal
+      primary: black
       accent: green
   features:
     # Core navigation
@@ -75,6 +75,7 @@ plugins:
   # - mermaid2
   - markdown-exec
   - panzoom  # Chưa cài plugin này
+  - mkdocs_quiz
   - blog:
       blog_dir: blog
       blog_toc: true
@@ -212,7 +213,7 @@ extra:
 
 extra_css:
   # - assets/stylesheets/heading.css
-  - assets/stylesheets/background.css
+  # - assets/stylesheets/background.css
   - assets/stylesheets/admonition.css
   - assets/stylesheets/table.css
   - assets/stylesheets/navlink.css

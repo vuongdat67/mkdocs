@@ -1,0 +1,2463 @@
+## PHẦN 1: ROUTING & SWITCHING
+
+**Câu 1: Router lưu trữ cấu hình đang chạy (running-config) ở đâu?**
+A. Flash
+B. NVRAM
+C. **RAM** ✓
+D. Hard Disk
+
+**Câu 2: Metric của giao thức RIP là gì?**
+A. Bandwidth
+B. Delay
+C. **Hop count** ✓
+D. Cost
+
+**Câu 3: RIPv2 gửi routing update đến địa chỉ nào?**
+A. 255.255.255.255
+B. **224.0.0.9** ✓
+C. 224.0.0.10
+D. 239.0.0.1
+
+**Câu 4: Giá trị hop count tối đa của RIP là bao nhiêu?**
+A. 10
+B. **15** ✓
+C. 16
+D. 255
+
+**Câu 5: OSPF sử dụng thuật toán nào để tính đường đi ngắn nhất?**
+A. Bellman-Ford
+B. **Dijkstra** ✓
+C. Distance Vector
+D. Link State Protocol
+
+**Câu 6: Wildcard mask 0.0.0.255 tương ứng với subnet mask nào?**
+A. 255.255.0.0
+B. 255.0.0.0
+C. **255.255.255.0** ✓
+D. 255.255.255.255
+
+**Câu 7: Câu lệnh nào dùng để tạo VLAN 10 trên switch?**
+A. switch(config)# create vlan 10
+B. **switch(config)# vlan 10** ✓
+C. switch(config-if)# vlan 10
+D. switch# vlan 10
+
+**Câu 8: Trunk port được cấu hình bằng lệnh nào?**
+A. switchport mode access
+B. **switchport mode trunk** ✓
+C. switchport trunk
+D. switchport vlan trunk
+
+**Câu 9: Inter-VLAN routing bằng Router-on-a-Stick sử dụng?**
+A. Multiple physical interfaces
+B. **Sub-interfaces** ✓
+C. Virtual interfaces
+D. Loopback interfaces
+
+**Câu 10: Encapsulation nào được sử dụng trên trunk link Cisco?**
+A. ISL
+B. **802.1Q (dot1Q)** ✓
+C. VTP
+D. STP
+
+## PHẦN 2: NETWORK SERVICES
+
+**Câu 11: Quá trình DHCP diễn ra theo thứ tự nào?**
+A. Offer - Discover - Request - ACK
+B. **Discover - Offer - Request - ACK** ✓
+C. Request - Discover - Offer - ACK
+D. Discover - Request - Offer - ACK
+
+**Câu 12: DHCP client gửi gói Discover đến địa chỉ nào?**
+A. 0.0.0.0
+B. 224.0.0.1
+C. **255.255.255.255** ✓
+D. 127.0.0.1
+
+**Câu 13: Địa chỉ IP 169.254.x.x cho biết điều gì?**
+A. DHCP server đang hoạt động bình thường
+B. **DHCP client không liên lạc được với DHCP server** ✓
+C. IP được cấu hình static
+D. IP được cấp từ DHCP Relay
+
+**Câu 14: Câu lệnh nào biến router thành DHCP relay agent?**
+A. ip dhcp relay
+B. **ip helper-address <dhcp-server-ip>** ✓
+C. ip dhcp forward
+D. dhcp relay-agent
+
+**Câu 15: NAT Overload (PAT) cho phép?**
+A. 1 IP private map với 1 IP public
+B. **Nhiều IP private dùng chung 1 IP public** ✓
+C. 1 IP public map với nhiều IP private
+D. Chỉ cho phép static mapping
+
+**Câu 16: Port Forwarding trong NAT dùng để?**
+A. Chuyển tiếp traffic giữa các port
+B. **Cho phép truy cập từ Internet vào server nội bộ** ✓
+C. Thay đổi port number của ứng dụng
+D. Load balancing giữa các server
+
+## PHẦN 3: ACL & SECURITY
+
+**Câu 17: Standard ACL nên đặt ở vị trí nào?**
+A. Gần source
+B. **Gần destination** ✓
+C. Ở giữa source và destination
+D. Bất kỳ đâu
+
+**Câu 18: Extended ACL nên đặt ở vị trí nào?**
+A. **Gần source** ✓
+B. Gần destination
+C. Ở giữa source và destination
+D. Bất kỳ đâu
+
+**Câu 19: Range số của Standard ACL là?**
+A. 100-199
+B. **1-99 và 1300-1999** ✓
+C. 2000-2699
+D. 1-1999
+
+**Câu 20: Trong wildcard mask, bit "0" có ý nghĩa gì?**
+A. Don't care
+B. **Must match** ✓
+C. Deny
+D. Permit
+
+**Câu 21: Keyword "any" trong ACL tương đương với?**
+A. 0.0.0.0 0.0.0.0
+B. **0.0.0.0 255.255.255.255** ✓
+C. 255.255.255.255 0.0.0.0
+D. 255.255.255.255 255.255.255.255
+
+**Câu 22: Implicit deny all trong ACL có ý nghĩa?**
+A. Cho phép tất cả traffic
+B. **Từ chối tất cả traffic không match với các rule trước đó** ✓
+C. Chỉ áp dụng cho inbound traffic
+D. Phải được cấu hình thủ công
+
+## PHẦN 4: WINDOWS & LINUX ADMINISTRATION
+
+**Câu 23: File nào trong Linux chứa thông tin user accounts?**
+A. /etc/shadow
+B. **/etc/passwd** ✓
+C. /etc/group
+D. /etc/login.defs
+
+**Câu 24: Active Directory sử dụng Group Policy theo thứ tự nào?**
+A. LOUD
+B. DSOU
+C. **LSDOU** ✓ (Local - Site - Domain - OU)
+D. OLSD
+
+**Câu 25: DNS Forward Lookup Zone dùng để?**
+A. IP → Name
+B. **Name → IP** ✓
+C. MAC → IP
+D. Port → Service
+
+## PHẦN 1: ROUTING FUNDAMENTALS (15 câu)
+
+**Câu 1: Router lưu trữ cấu hình đang chạy (running-config) ở đâu?**
+A. Flash
+B. NVRAM
+C. **RAM** ✓
+D. Hard Disk
+
+**Câu 2: Router lưu trữ cấu hình khởi động (startup-config) ở đâu?**
+A. Flash
+B. **NVRAM** ✓
+C. RAM
+D. ROM
+
+**Câu 3: Router lưu trữ IOS (hệ điều hành) ở đâu?**
+A. **Flash** ✓
+B. NVRAM
+C. RAM
+D. ROM
+
+**Câu 4: Khi router khởi động, nó load cấu hình theo thứ tự nào?**
+A. RAM → NVRAM → Flash
+B. NVRAM → RAM → Flash
+C. **NVRAM → RAM** ✓
+D. Flash → RAM → NVRAM
+
+**Câu 5: Metric của giao thức RIP là gì?**
+A. Bandwidth
+B. Delay
+C. **Hop count** ✓
+D. Cost
+
+**Câu 6: Giá trị hop count tối đa của RIP là bao nhiêu?**
+A. 10
+B. **15** ✓
+C. 16
+D. 255
+
+**Câu 7: Giá trị hop count = 16 trong RIP có ý nghĩa gì?**
+A. Đường đi hợp lệ
+B. **Network unreachable** ✓
+C. Cần recalculate
+D. Default route
+
+**Câu 8: RIP gửi routing update mỗi bao lâu?**
+A. 15 giây
+B. **30 giây** ✓
+C. 60 giây
+D. 90 giây
+
+**Câu 9: RIPv2 gửi routing update đến địa chỉ nào?**
+A. 255.255.255.255
+B. **224.0.0.9** ✓
+C. 224.0.0.10
+D. 239.0.0.1
+
+**Câu 10: RIPv1 gửi routing update đến địa chỉ nào?**
+A. **255.255.255.255** ✓
+B. 224.0.0.9
+C. 224.0.0.10
+D. 239.0.0.1
+
+**Câu 11: RIP sử dụng giao thức transport layer nào?**
+A. TCP port 520
+B. **UDP port 520** ✓
+C. TCP port 179
+D. UDP port 161
+
+**Câu 12: RIP thuộc loại giao thức định tuyến nào?**
+A. Link-state
+B. **Distance-vector** ✓
+C. Hybrid
+D. Path-vector
+
+**Câu 13: OSPF sử dụng thuật toán nào để tính đường đi ngắn nhất?**
+A. Bellman-Ford
+B. **Dijkstra** ✓
+C. Distance Vector
+D. Flood Fill
+
+**Câu 14: OSPF sử dụng metric dựa trên gì?**
+A. Hop count
+B. Delay
+C. **Cost (Bandwidth)** ✓
+D. Load
+
+**Câu 15: OSPF gửi hello packet mỗi bao lâu (mặc định trên broadcast network)?**
+A. **10 giây** ✓
+B. 30 giây
+C. 40 giây
+D. 120 giây
+
+## PHẦN 2: STATIC ROUTING (10 câu)
+
+**Câu 16: Câu lệnh nào dùng để tạo static route?**
+A. router static
+B. **ip route** ✓
+C. route add
+D. static-route
+
+**Câu 17: Default route được biểu diễn như thế nào?**
+A. 255.255.255.255 255.255.255.255
+B. **0.0.0.0 0.0.0.0** ✓
+C. any any
+D. all-routes
+
+**Câu 18: Administrative Distance của static route là bao nhiêu?**
+A. 0
+B. **1** ✓
+C. 90
+D. 110
+
+**Câu 19: Administrative Distance của connected route là bao nhiêu?**
+A. **0** ✓
+B. 1
+C. 5
+D. 10
+
+**Câu 20: Administrative Distance của OSPF là bao nhiêu?**
+A. 90
+B. 100
+C. **110** ✓
+D. 120
+
+**Câu 21: Administrative Distance của RIP là bao nhiêu?**
+A. 90
+B. 110
+C. **120** ✓
+D. 150
+
+**Câu 22: Administrative Distance của EIGRP là bao nhiêu?**
+A. **90** ✓
+B. 100
+C. 110
+D. 120
+
+**Câu 23: Floating static route là gì?**
+A. Static route tự động thay đổi
+B. **Static route có AD cao hơn dynamic route để làm backup** ✓
+C. Static route không bao giờ xuống
+D. Static route load-balancing
+
+**Câu 24: Để tạo floating static route, ta cần?**
+A. Sử dụng metric cao
+B. **Sử dụng AD cao hơn** ✓
+C. Sử dụng priority
+D. Sử dụng weight
+
+**Câu 25: Static route có ưu điểm gì?**
+A. Tự động cập nhật khi topology thay đổi
+B. **Bảo mật tốt, không quảng bá** ✓
+C. Dễ quản lý trong mạng lớn
+D. Tự động load-balancing
+
+## PHẦN 3: VLAN & SWITCHING (15 câu)
+
+**Câu 26: VLAN hoạt động ở layer nào của OSI?**
+A. Layer 1
+B. **Layer 2** ✓
+C. Layer 3
+D. Layer 4
+
+**Câu 27: Câu lệnh nào dùng để tạo VLAN 10 trên switch?**
+A. switch(config)# create vlan 10
+B. **switch(config)# vlan 10** ✓
+C. switch(config-if)# vlan 10
+D. switch# vlan 10
+
+**Câu 28: Range VLAN ID hợp lệ là?**
+A. 0-4095
+B. **1-4094** ✓
+C. 1-1024
+D. 1-4096
+
+**Câu 29: VLAN 1 có đặc điểm gì?**
+A. Không tồn tại
+B. Phải tạo thủ công
+C. **Default VLAN, không thể xóa** ✓
+D. Chỉ dùng cho management
+
+**Câu 30: VLAN 1002-1005 được dùng cho?**
+A. Extended VLANs
+B. **Token Ring và FDDI** ✓
+C. Management
+D. Reserved
+
+**Câu 31: Normal range VLAN là?**
+A. **1-1005** ✓
+B. 1-4094
+C. 1006-4094
+D. 1-1024
+
+**Câu 32: Extended range VLAN là?**
+A. 1-1005
+B. 1-4094
+C. **1006-4094** ✓
+D. 2000-4094
+
+**Câu 33: Trunk port được cấu hình bằng lệnh nào?**
+A. switchport mode access
+B. **switchport mode trunk** ✓
+C. switchport trunk
+D. switchport vlan trunk
+
+**Câu 34: Access port được cấu hình bằng lệnh nào?**
+A. **switchport mode access** ✓
+B. switchport mode trunk
+C. switchport access
+D. switchport vlan
+
+**Câu 35: Encapsulation nào được sử dụng trên trunk link Cisco?**
+A. ISL
+B. **802.1Q (dot1Q)** ✓
+C. VTP
+D. STP
+
+**Câu 36: 802.1Q thêm bao nhiêu bytes vào Ethernet frame?**
+A. 2 bytes
+B. **4 bytes** ✓
+C. 8 bytes
+D. 12 bytes
+
+**Câu 37: Native VLAN trong 802.1Q có tác dụng gì?**
+A. VLAN có priority cao nhất
+B. **VLAN không được tag trên trunk** ✓
+C. VLAN quản lý
+D. VLAN mặc định cho access port
+
+**Câu 38: Native VLAN mặc định là VLAN nào?**
+A. VLAN 0
+B. **VLAN 1** ✓
+C. VLAN 99
+D. VLAN 1002
+
+**Câu 39: VTP (VLAN Trunking Protocol) hoạt động ở mode nào KHÔNG tạo/sửa/xóa VLAN?**
+A. Server
+B. **Client** ✓
+C. Transparent
+D. Off
+
+**Câu 40: STP (Spanning Tree Protocol) được dùng để?**
+A. Tăng tốc độ switching
+B. **Ngăn chặn loop trong mạng** ✓
+C. Quản lý VLAN
+D. Bảo mật port
+
+## PHẦN 4: INTER-VLAN ROUTING (10 câu)
+
+**Câu 41: Inter-VLAN routing hoạt động ở layer nào?**
+A. Layer 2
+B. **Layer 3** ✓
+C. Layer 4
+D. Layer 2 và 3
+
+**Câu 42: Router-on-a-Stick sử dụng?**
+A. Multiple physical interfaces
+B. **Sub-interfaces** ✓
+C. Virtual interfaces
+D. Loopback interfaces
+
+**Câu 43: Câu lệnh nào tạo sub-interface?**
+A. interface g0/0 sub 10
+B. **interface g0/0.10** ✓
+C. interface g0/0-10
+D. subinterface g0/0 10
+
+**Câu 44: Encapsulation trên sub-interface được cấu hình bằng lệnh nào?**
+A. encapsulation trunk
+B. **encapsulation dot1Q <vlan-id>** ✓
+C. encapsulation vlan <vlan-id>
+D. encapsulation 802.1q <vlan-id>
+
+**Câu 45: Multilayer switch khác switch layer 2 ở điểm nào?**
+A. Có nhiều port hơn
+B. **Có khả năng routing** ✓
+C. Hỗ trợ nhiều VLAN hơn
+D. Tốc độ nhanh hơn
+
+**Câu 46: SVI (Switch Virtual Interface) là gì?**
+A. Physical interface trên switch
+B. **Virtual interface đại diện cho VLAN** ✓
+C. Sub-interface
+D. Management interface
+
+**Câu 47: Để enable routing trên multilayer switch, dùng lệnh nào?**
+A. enable routing
+B. router enable
+C. **ip routing** ✓
+D. routing on
+
+**Câu 48: Legacy inter-VLAN routing có nhược điểm gì?**
+A. Cấu hình phức tạp
+B. **Cần nhiều physical interfaces** ✓
+C. Không bảo mật
+D. Tốc độ chậm
+
+**Câu 49: Router-on-a-Stick có nhược điểm gì?**
+A. Cần nhiều router
+B. **Single point of failure, bandwidth bottleneck** ✓
+C. Không hỗ trợ nhiều VLAN
+D. Khó cấu hình
+
+**Câu 50: Multilayer switch inter-VLAN routing có ưu điểm gì?**
+A. Rẻ hơn router
+B. **Wire-speed routing, performance cao** ✓
+C. Dễ cấu hình hơn
+D. Bảo mật tốt hơn
+
+## PHẦN 5: DHCP (12 câu)
+
+**Câu 51: DHCP là viết tắt của?**
+A. Dynamic Host Control Protocol
+B. **Dynamic Host Configuration Protocol** ✓
+C. Dynamic Hardware Configuration Protocol
+D. Domain Host Configuration Protocol
+
+**Câu 52: DHCP hoạt động ở layer nào?**
+A. Layer 2
+B. Layer 3
+C. Layer 4
+D. **Layer 7 (Application)** ✓
+
+**Câu 53: DHCP sử dụng port nào?**
+A. TCP 67, 68
+B. **UDP 67 (server), 68 (client)** ✓
+C. TCP 80, 443
+D. UDP 520, 521
+
+**Câu 54: Quá trình DHCP diễn ra theo thứ tự nào?**
+A. Offer - Discover - Request - ACK
+B. **Discover - Offer - Request - ACK** ✓
+C. Request - Discover - Offer - ACK
+D. Discover - Request - Offer - ACK
+
+**Câu 55: DHCP Discover packet có đặc điểm gì?**
+A. Unicast
+B. **Broadcast** ✓
+C. Multicast
+D. Anycast
+
+**Câu 56: DHCP Discover có source IP là?**
+A. Client IP cũ
+B. **0.0.0.0** ✓
+C. 127.0.0.1
+D. 169.254.x.x
+
+**Câu 57: DHCP Discover có destination IP là?**
+A. DHCP server IP
+B. **255.255.255.255** ✓
+C. 224.0.0.1
+D. 0.0.0.0
+
+**Câu 58: Địa chỉ IP 169.254.x.x cho biết điều gì?**
+A. DHCP server đang hoạt động bình thường
+B. **DHCP client không liên lạc được với DHCP server (APIPA)** ✓
+C. IP được cấu hình static
+D. IP được cấp từ DHCP Relay
+
+**Câu 59: APIPA (Automatic Private IP Addressing) thuộc dải IP nào?**
+A. 10.0.0.0/8
+B. 172.16.0.0/12
+C. **169.254.0.0/16** ✓
+D. 192.168.0.0/16
+
+**Câu 60: DHCP Relay Agent cần thiết khi nào?**
+A. Khi có nhiều clients
+B. **Khi DHCP server và client ở khác subnet** ✓
+C. Khi cần bảo mật
+D. Khi cần backup
+
+**Câu 61: Câu lệnh nào biến router thành DHCP relay agent?**
+A. ip dhcp relay
+B. **ip helper-address <dhcp-server-ip>** ✓
+C. ip dhcp forward
+D. dhcp relay-agent
+
+**Câu 62: DHCP lease time dùng để làm gì?**
+A. Thời gian server đợi response
+B. **Thời gian client được sử dụng IP** ✓
+C. Thời gian timeout
+D. Thời gian renewal
+
+## PHẦN 6: NAT (15 câu)
+
+**Câu 63: NAT là viết tắt của?**
+A. Network Address Translation
+B. **Network Address Translation** ✓
+C. Network Access Translation
+D. Network Application Translation
+
+**Câu 64: NAT hoạt động ở layer nào?**
+A. Layer 2
+B. **Layer 3** ✓
+C. Layer 4
+D. Layer 7
+
+**Câu 65: Inside Local address là gì?**
+A. IP public của inside host
+B. **IP private của inside host** ✓
+C. IP của outside host
+D. IP của NAT router
+
+**Câu 66: Inside Global address là gì?**
+A. IP private của inside host
+B. **IP public đại diện cho inside host** ✓
+C. IP của outside host
+D. IP gateway
+
+**Câu 67: Static NAT mapping là?**
+A. Nhiều private → 1 public
+B. **1 private → 1 public cố định** ✓
+C. 1 private → nhiều public
+D. Dynamic mapping
+
+**Câu 68: Dynamic NAT sử dụng?**
+A. Fixed mapping
+B. **Pool of public IPs** ✓
+C. Single public IP
+D. No public IP
+
+**Câu 69: PAT (Port Address Translation) còn được gọi là?**
+A. Static NAT
+B. Dynamic NAT
+C. **NAT Overload** ✓
+D. NAT Pool
+
+**Câu 70: PAT cho phép?**
+A. 1 IP private map với 1 IP public
+B. **Nhiều IP private dùng chung 1 IP public** ✓
+C. 1 IP public map với nhiều IP private
+D. Chỉ cho phép static mapping
+
+**Câu 71: PAT phân biệt các connection bằng?**
+A. MAC address
+B. IP address
+C. **Port number** ✓
+D. VLAN ID
+
+**Câu 72: Câu lệnh nào cấu hình NAT Overload?**
+A. ip nat inside source list 1 pool NAT
+B. **ip nat inside source list 1 interface g0/1 overload** ✓
+C. ip nat overload list 1
+D. nat overload enable
+
+**Câu 73: Port Forwarding trong NAT dùng để?**
+A. Chuyển tiếp traffic giữa các port
+B. **Cho phép truy cập từ Internet vào server nội bộ** ✓
+C. Thay đổi port number của ứng dụng
+D. Load balancing giữa các server
+
+**Câu 74: Câu lệnh nào đánh dấu interface là NAT inside?**
+A. nat inside
+B. **ip nat inside** ✓
+C. inside nat
+D. set nat inside
+
+**Câu 75: Câu lệnh nào đánh dấu interface là NAT outside?**
+A. nat outside
+B. **ip nat outside** ✓
+C. outside nat
+D. set nat outside
+
+**Câu 76: Xem NAT translations bằng lệnh nào?**
+A. show nat
+B. **show ip nat translations** ✓
+C. show translations
+D. display nat
+
+**Câu 77: Clear NAT translations bằng lệnh nào?**
+A. delete nat translations
+B. **clear ip nat translation *** ✓
+C. remove nat translations
+D. reset nat
+
+## PHẦN 7: ACL (20 câu)
+
+**Câu 78: ACL là viết tắt của?**
+A. Access Control Language
+B. **Access Control List** ✓
+C. Access Configuration List
+D. Application Control List
+
+**Câu 79: ACL hoạt động ở layer nào?**
+A. Layer 2
+B. **Layer 3 và Layer 4** ✓
+C. Layer 5
+D. Layer 7
+
+**Câu 80: Standard ACL filter dựa trên?**
+A. Destination IP
+B. **Source IP** ✓
+C. Source và Destination IP
+D. Port number
+
+**Câu 81: Extended ACL filter dựa trên?**
+A. Source IP only
+B. Destination IP only
+C. **Source IP, Dest IP, Protocol, Port** ✓
+D. MAC address
+
+**Câu 82: Range số của Standard ACL là?**
+A. 100-199
+B. **1-99 và 1300-1999** ✓
+C. 2000-2699
+D. 1-1999
+
+**Câu 83: Range số của Extended ACL là?**
+A. 1-99
+B. **100-199 và 2000-2699** ✓
+C. 1-199
+D. 100-299
+
+**Câu 84: Standard ACL nên đặt ở vị trí nào?**
+A. Gần source
+B. **Gần destination** ✓
+C. Ở giữa source và destination
+D. Bất kỳ đâu
+
+**Câu 85: Extended ACL nên đặt ở vị trí nào?**
+A. **Gần source** ✓
+B. Gần destination
+C. Ở giữa source và destination
+D. Bất kỳ đâu
+
+**Câu 86: Tại sao Standard ACL đặt gần destination?**
+A. Để tăng tốc độ
+B. **Để tránh block traffic không mong muốn** ✓
+C. Để dễ cấu hình
+D. Không có lý do cụ thể
+
+**Câu 87: Tại sao Extended ACL đặt gần source?**
+A. Để dễ cấu hình
+B. **Để drop traffic sớm nhất, tiết kiệm bandwidth** ✓
+C. Để tăng bảo mật
+D. Không có lý do cụ thể
+
+**Câu 88: Wildcard mask 0.0.0.0 có ý nghĩa gì?**
+A. Match any
+B. **Match exact IP** ✓
+C. Don't care all bits
+D. Deny all
+
+**Câu 89: Wildcard mask 255.255.255.255 có ý nghĩa gì?**
+A. Match exact IP
+B. **Match any IP** ✓
+C. Match network
+D. Invalid
+
+**Câu 90: Trong wildcard mask, bit "0" có ý nghĩa gì?**
+A. Don't care
+B. **Must match** ✓
+C. Deny
+D. Permit
+
+**Câu 91: Trong wildcard mask, bit "1" có ý nghĩa gì?**
+A. Must match
+B. **Don't care** ✓
+C. Deny
+D. Permit
+
+**Câu 92: Keyword "host" trong ACL tương đương với?**
+A. 255.255.255.255 0.0.0.0
+B. **<IP> 0.0.0.0** ✓
+C. any
+D. all
+
+**Câu 93: Keyword "any" trong ACL tương đương với?**
+A. 0.0.0.0 0.0.0.0
+B. **0.0.0.0 255.255.255.255** ✓
+C. 255.255.255.255 0.0.0.0
+D. host
+
+**Câu 94: ACL được xử lý theo thứ tự nào?**
+A. Từ dưới lên
+B. **Từ trên xuống (top-down)** ✓
+C. Random
+D. Theo priority
+
+**Câu 95: Implicit deny all trong ACL có ý nghĩa?**
+A. Cho phép tất cả traffic
+B. **Từ chối tất cả traffic không match với các rule trước đó** ✓
+C. Chỉ áp dụng cho inbound traffic
+D. Phải được cấu hình thủ công
+
+**Câu 96: Một interface có thể áp dụng bao nhiêu ACL per direction per protocol?**
+A. Không giới hạn
+B. 2
+C. **1** ✓
+D. 5
+
+**Câu 97: Câu lệnh nào áp dụng ACL vào interface?**
+A. apply access-list
+B. **ip access-group <acl> {in|out}** ✓
+C. set access-list
+D. enable access-list
+
+## PHẦN 8: DNS (8 câu)
+
+**Câu 98: DNS là viết tắt của?**
+A. Domain Network System
+B. **Domain Name System** ✓
+C. Dynamic Name System
+D. Domain Name Service
+
+**Câu 99: DNS hoạt động ở layer nào?**
+A. Layer 3
+B. Layer 4
+C. **Layer 7 (Application)** ✓
+D. Layer 5
+
+**Câu 100: DNS sử dụng port nào?**
+A. **UDP 53 (queries), TCP 53 (zone transfers)** ✓
+B. TCP 53 only
+C. UDP 53 only
+D. TCP/UDP 80
+
+**Câu 101: DNS Record type A dùng để?**
+A. IP → Name
+B. **Name → IPv4** ✓
+C. Name → IPv6
+D. Alias
+
+**Câu 102: DNS Record type AAAA dùng để?**
+A. Name → IPv4
+B. **Name → IPv6** ✓
+C. IP → Name
+D. Mail server
+
+**Câu 103: DNS Record type PTR dùng để?**
+A. Name → IP
+B. **IP → Name (Reverse lookup)** ✓
+C. Alias
+D. Mail server
+
+**Câu 104: DNS Record type CNAME dùng để?**
+A. Name → IP
+B. IP → Name
+C. **Alias (canonical name)** ✓
+D. Mail server
+
+**Câu 105: DNS Record type MX dùng để?**
+A. Name → IP
+B. IP → Name
+C. Alias
+D. **Mail server** ✓
+
+## PHẦN 9: LINUX ADMINISTRATION (15 câu)
+
+**Câu 106: File nào trong Linux chứa thông tin user accounts?**
+A. /etc/shadow
+B. **/etc/passwd** ✓
+C. /etc/group
+D. /etc/login.defs
+
+**Câu 107: File nào trong Linux chứa encrypted passwords?**
+A. /etc/passwd
+B. **/etc/shadow** ✓
+C. /etc/group
+D. /etc/security
+
+**Câu 108: File nào trong Linux chứa thông tin groups?**
+A. /etc/passwd
+B. /etc/shadow
+C. **/etc/group** ✓
+D. /etc/users
+
+**Câu 109: Câu lệnh nào tạo user trong Linux?**
+A. adduser
+B. **useradd** ✓
+C. createuser
+D. newuser
+
+**Câu 110: Câu lệnh nào xóa user trong Linux?**
+A. deluser
+B. removeuser
+C. **userdel** ✓
+D. deleteuser
+
+**Câu 111: Option nào của userdel để xóa cả home directory?**
+A. -d
+B. -h
+C. **-r** ✓
+D. -f
+
+**Câu 112: Câu lệnh nào đổi password user trong Linux?**
+A. password
+B. **passwd** ✓
+C. chpasswd
+D. pwchange
+
+**Câu 113: Câu lệnh nào tạo group trong Linux?**
+A. addgroup
+B. **groupadd** ✓
+C. creategroup
+D. newgroup
+
+**Câu 114: File cấu hình network interface trong CentOS/RHEL nằm ở đâu?**
+A. /etc/network/interfaces
+B. **/etc/sysconfig/network-scripts/ifcfg-eth0** ✓
+C. /etc/netplan/
+D. /etc/network/config
+
+**Câu 115: File cấu hình DNS resolver trong Linux là?**
+A. /etc/dns.conf
+B. **/etc/resolv.conf** ✓
+C. /etc/network/dns
+D. /etc/hosts.conf
+
+**Câu 116: Câu lệnh nào xem địa chỉ IP trong Linux?**
+A. ipconfig
+B. **ifconfig hoặc ip addr** ✓
+C. showip
+D. netstat -i
+
+**Câu 117: Câu lệnh nào xem routing table trong Linux?**
+A. **route -n hoặc ip route** ✓
+B. netstat -r
+C. show route
+D. display route
+
+**Câu 118: Câu lệnh nào test connectivity trong Linux?**
+A. test
+B. **ping** ✓
+C. check
+D. connect
+
+**Câu 119: Câu lệnh nào xem listening ports trong Linux?**
+A. **netstat -tuln** ✓
+B. showports
+C. listports
+D. ports -l
+
+**Câu 120: Câu lệnh nào SSH đến remote host?**
+A. **ssh user@host** ✓
+B. connect user@host
+C. remote user@host
+D. telnet user@host
+
+## PHẦN 10: WINDOWS SERVER (12 câu)
+
+**Câu 121: Active Directory Domain Services (AD DS) quản lý gì?**
+A. File server only
+B. **Users, Computers, Groups, Policies** ✓
+C. Network devices
+D. Web services
+
+**Câu 122: Domain trong AD DS là gì?**
+A. Network segment
+B. **Security and administrative boundary** ✓
+C. Physical location
+D. VLAN
+
+**Câu 123: OU (Organizational Unit) dùng để?**
+A. Tạo user
+B. **Organize objects và apply policies** ✓
+C. Tạo groups
+D. Backup data
+
+**Câu 124: Group Policy được áp dụng theo thứ tự nào?**
+A. LOUD
+B. DSOU
+C. **LSDOU (Local - Site - Domain - OU)** ✓
+D. OLSD
+
+**Câu 125: Security Group trong AD dùng để?**
+A. Email distribution
+B. **Assign permissions** ✓
+C. Organize users
+D. Backup
+
+**Câu 126: Distribution Group trong AD dùng để?**
+A. Assign permissions
+B. **Email distribution lists** ✓
+C. Security
+D. Login
+
+**Câu 127: DNS Forward Lookup Zone dùng để?**
+A. IP → Name
+B. **Name → IP** ✓
+C. MAC → IP
+D. Port → Service
+
+**Câu 128: DNS Reverse Lookup Zone dùng để?**
+A. Name → IP
+B. **IP → Name** ✓
+C. MAC → IP
+D. Service → Port
+
+**Câu 129: DHCP Scope là gì?**
+A. DHCP server range
+B. **Pool of IP addresses to lease** ✓
+C. Subnet mask
+D. Gateway
+
+**Câu 130: DHCP Reservation dùng để?**
+A. Reserve IP không cho thuê
+B. **Bind MAC address to specific IP** ✓
+C. Backup DHCP
+D. Exclude IP range
+
+**Câu 131: DHCP Exclusion dùng để?**
+A. Exclude clients
+B. **Exclude IP range from being leased** ✓
+C. Exclude MAC
+D. Exclude subnet
+
+**Câu 132: IIS (Internet Information Services) là?**
+A. DNS server
+B. **Web server** ✓
+C. Mail server
+D. File server
+
+## PHẦN 11: NETWORK SERVICES (10 câu)
+
+**Câu 133: SNMP là viết tắt của?**
+A. Simple Network Monitoring Protocol
+B. **Simple Network Management Protocol** ✓
+C. Secure Network Management Protocol
+D. System Network Management Protocol
+
+**Câu 134: SNMP sử dụng port nào?**
+A. TCP 161, 162
+B. **UDP 161 (agent), 162 (trap)** ✓
+C. UDP 514
+D. TCP 514
+
+**Câu 135: SNMP Community String dùng để?**
+A. Identify device
+B. **Authentication (password)** ✓
+C. Encryption
+D. Compression
+
+**Câu 136: Syslog sử dụng port nào?**
+A. TCP 514
+B. **UDP 514** ✓
+C. UDP 161
+D. TCP 162
+
+**Câu 137: NTP (Network Time Protocol) sử dụng port nào?**
+A. UDP 161
+B. **UDP 123** ✓
+C. TCP 123
+D. UDP 514
+
+**Câu 138: TFTP (Trivial FTP) sử dụng port nào?**
+A. TCP 20, 21
+B. **UDP 69** ✓
+C. TCP 69
+D. UDP 20, 21
+
+**Câu 139: FTP sử dụng port nào?**
+A. **TCP 20 (data), 21 (control)** ✓
+B. UDP 20, 21
+C. TCP 21 only
+D. UDP 69
+
+**Câu 140: Telnet sử dụng port nào?**
+A. **TCP 23** ✓
+B. TCP 22
+C. UDP 23
+D. TCP 80
+
+**Câu 141: SSH sử dụng port nào?**
+A. TCP 23
+B. **TCP 22** ✓
+C. UDP 22
+D. TCP 21
+
+**Câu 142: HTTP sử dụng port nào?**
+A. **TCP 80** ✓
+B. TCP 443
+C. UDP 80
+D. TCP 8080
+
+## PHẦN 12: SECURITY & MONITORING (15 câu)
+
+**Câu 143: HTTPS sử dụng port nào?**
+A. TCP 80
+B. **TCP 443** ✓
+C. UDP 443
+D. TCP 8443
+
+**Câu 144: IDS là viết tắt của?**
+A. Intrusion Detection Service
+B. **Intrusion Detection System** ✓
+C. Internet Detection System
+D. Internal Detection Service
+
+**Câu 145: IPS là viết tắt của?**
+A. Intrusion Prevention Service
+B. **Intrusion Prevention System** ✓
+C. Internet Prevention System
+D. Internal Prevention Service
+
+**Câu 146: IDS và IPS khác nhau ở điểm nào?**
+A. Port sử dụng
+B. **IDS chỉ detect, IPS detect và prevent** ✓
+C. IDS nhanh hơn
+D. Không khác
+
+**Câu 147: Firewall hoạt động ở layer nào?**
+A. Layer 2
+B. **Layer 3 và 4 (hoặc higher)** ✓
+C. Layer 7 only
+D. Layer 1
+
+**Câu 148: VPN là viết tắt của?**
+A. Virtual Public Network
+B. **Virtual Private Network** ✓
+C. Very Private Network
+D. Virtual Protected Network
+
+**Câu 149: VPN hoạt động dựa trên?**
+A. NAT
+B. Proxy
+C. **Encryption tunnel** ✓
+D. VLAN
+
+**Câu 150: IPSec VPN hoạt động ở layer nào?**
+A. Layer 2
+B. **Layer 3** ✓
+C. Layer 4
+D. Layer 7
+
+**Câu 151: SSL VPN hoạt động ở layer nào?**
+A. Layer 2
+B. Layer 3
+C. **Layer 4/7** ✓
+D. Layer 1
+
+**Câu 152: Proxy server hoạt động ở layer nào?**
+A. Layer 2
+B. Layer 3
+C. Layer 4
+D. **Layer 7 (Application)** ✓
+
+**Câu 153: Transparent proxy có đặc điểm gì?**
+A. Cần cấu hình trên client
+B. **Client không cần cấu hình** ✓
+C. Chỉ hỗ trợ HTTP
+D. Không cache được
+
+**Câu 154: Squid Proxy mặc định lắng nghe trên port nào?**
+A. 80
+B. 8080
+C. **3128** ✓
+D. 8888
+
+**Câu 155: Fail2ban dùng để làm gì?**
+A. Monitor network
+B. **Auto-block brute-force attacks** ✓
+C. Backup system
+D. Load balancing
+
+**Câu 156: Zabbix Agent mặc định lắng nghe trên port nào?**
+A. **10050** ✓
+B. 10051
+C. 161
+D. 162
+
+**Câu 157: Zabbix Server/Trapper lắng nghe trên port nào?**
+A. 10050
+B. **10051** ✓
+C. 161
+D. 162
+
+## PHẦN 13: VIRTUALIZATION & CLOUD (10 câu)
+
+**Câu 158: Hypervisor Type 1 còn được gọi là?**
+A. Hosted
+B. **Bare-metal** ✓
+C. Container
+D. Emulator
+
+**Câu 159: Hypervisor Type 2 còn được gọi là?**
+A. Bare-metal
+B. **Hosted** ✓
+C. Native
+D. Hardware
+
+**Câu 160: VMware ESXi là loại hypervisor nào?**
+A. **Type 1** ✓
+B. Type 2
+C. Container
+D. Emulator
+
+**Câu 161: VirtualBox là loại hypervisor nào?**
+A. Type 1
+B. **Type 2** ✓
+C. Container
+D. Bare-metal
+
+**Câu 162: Docker là công nghệ gì?**
+A. Hypervisor Type 1
+B. Hypervisor Type 2
+C. **Container (OS-level virtualization)** ✓
+D. Full virtualization
+
+**Câu 163: Container khác VM ở điểm nào?**
+A. Container nặng hơn
+B. **Container share kernel, VM có kernel riêng** ✓
+C. Container chậm hơn
+D. Không khác
+
+**Câu 164: IaaS là viết tắt của?**
+A. Internet as a Service
+B. **Infrastructure as a Service** ✓
+C. Integration as a Service
+D. Information as a Service
+
+**Câu 165: PaaS là viết tắt của?**
+A. **Platform as a Service** ✓
+B. Programming as a Service
+C. Processing as a Service
+D. Protocol as a Service
+
+**Câu 166: SaaS là viết tắt của?**
+A. System as a Service
+B. **Software as a Service** ✓
+C. Security as a Service
+D. Storage as a Service
+
+**Câu 167: Ví dụ nào là SaaS?**
+A. AWS EC2
+B. Azure Virtual Machine
+C. **Gmail, Office 365** ✓
+D. VMware vSphere
+
+## PHẦN 14: PROTOCOLS & STANDARDS (10 câu)
+
+**Câu 168: TCP là giao thức?**
+A. Connectionless
+B. **Connection-oriented** ✓
+C. Best-effort
+D. Broadcast
+
+**Câu 169: UDP là giao thức?**
+A. Connection-oriented
+B. **Connectionless** ✓
+C. Reliable
+D. Guaranteed delivery
+
+**Câu 170: TCP sử dụng cơ chế nào để đảm bảo reliability?**
+A. Broadcast
+B. **ACK và retransmission** ✓
+C. Multicast
+D. ICMP
+
+**Câu 171: Three-way handshake của TCP gồm?**
+A. ACK - SYN - FIN
+B. **SYN - SYN-ACK - ACK** ✓
+C. SYN - ACK - FIN
+D. HELLO - ACK - BYE
+
+**Câu 172: ICMP là giao thức?**
+A. Transport layer
+B. **Network layer (control protocol)** ✓
+C. Application layer
+D. Data link layer
+
+**Câu 173: Ping sử dụng giao thức nào?**
+A. TCP
+B. UDP
+C. **ICMP** ✓
+D. ARP
+
+**Câu 174: ARP dùng để?**
+A. IP → MAC
+B. **IP → MAC** ✓
+C. MAC → IP
+D. Name → IP
+
+**Câu 175: ARP hoạt động ở layer nào?**
+A. Layer 1
+B. **Layer 2** ✓
+C. Layer 3
+D. Layer 4
+
+**Câu 176: RARP dùng để?**
+A. IP → MAC
+B. **MAC → IP** ✓
+C. Name → IP
+D. IP → Name
+
+**Câu 177: MTU (Maximum Transmission Unit) mặc định của Ethernet là?**
+A. 1024 bytes
+B. **1500 bytes** ✓
+C. 2048 bytes
+D. 9000 bytes
+
+## PHẦN 15: TROUBLESHOOTING & BEST PRACTICES (10 câu)
+
+**Câu 178: Khi troubleshoot network, nên kiểm tra theo thứ tự nào?**
+A. Top-down (Layer 7 → 1)
+B. **Bottom-up (Layer 1 → 7)** ✓
+C. Random
+D. Application first
+
+**Câu 179: Câu lệnh nào kiểm tra connectivity nhanh nhất?**
+A. traceroute
+B. **ping** ✓
+C. telnet
+D. netstat
+
+**Câu 180: Traceroute dùng để?**
+A. Test connectivity
+B. **Xem đường đi của packet** ✓
+C. Scan ports
+D. Monitor bandwidth
+
+**Câu 181: Nslookup/dig dùng để?**
+A. Test connectivity
+B. **Query DNS** ✓
+C. Scan ports
+D. Monitor network
+
+**Câu 182: Khi PC không lên được mạng, bước đầu tiên nên?**
+A. Restart router
+B. **Kiểm tra cable và IP address** ✓
+C. Reinstall OS
+D. Call ISP
+
+**Câu 183: Lệnh nào xem routing table trên router?**
+A. show route
+B. **show ip route** ✓
+C. display route
+D. get route
+
+**Câu 184: Lệnh nào xem interface status trên router?**
+A. **show ip interface brief** ✓
+B. show interfaces
+C. display interface
+D. get interface
+
+**Câu 185: Lệnh nào save cấu hình trên Cisco router?**
+A. save
+B. **copy running-config startup-config** ✓
+C. write memory
+D. Cả B và C
+
+**Câu 186: Lệnh nào xem VLAN trên switch?**
+A. show vlans
+B. **show vlan brief** ✓
+C. display vlan
+D. get vlan
+
+**Câu 187: Lệnh nào xem trunk status trên switch?**
+A. show trunk
+B. **show interfaces trunk** ✓
+C. display trunk
+D. get trunk
+
+
+### PHẦN 16: EtherChannel/Port-Channel (10 câu)
+
+**Câu 188: EtherChannel dùng để làm gì?**
+A. Tăng số lượng VLANs
+B. **Gom nhiều physical links thành 1 logical link** ✓
+C. Tạo VLAN trunk
+D. Load balancing giữa routers
+
+**Câu 189: EtherChannel có thể gom tối đa bao nhiêu ports?**
+A. 4
+B. **8** ✓
+C. 16
+D. 32
+
+**Câu 190: PAgP là giao thức gì?**
+A. Chuẩn IEEE
+B. **Cisco proprietary EtherChannel protocol** ✓
+C. Open standard
+D. Routing protocol
+
+**Câu 191: LACP là giao thức gì?**
+A. Cisco proprietary
+B. **IEEE 802.3ad open standard** ✓
+C. Routing protocol
+D. VLAN protocol
+
+**Câu 192: PAgP mode "desirable" có nghĩa gì?**
+A. Không tạo EtherChannel
+B. **Actively negotiate EtherChannel** ✓
+C. Passive wait
+D. Force EtherChannel
+
+**Câu 193: PAgP mode "auto" có nghĩa gì?**
+A. Tự động tạo
+B. **Passively wait for negotiation** ✓
+C. Disable EtherChannel
+D. Force on
+
+**Câu 194: LACP mode "active" có nghĩa gì?**
+A. Passive wait
+B. **Actively negotiate EtherChannel** ✓
+C. Disable LACP
+D. Force on
+
+**Câu 195: LACP mode "passive" có nghĩa gì?**
+A. Actively negotiate
+B. **Passively wait for negotiation** ✓
+C. Disable LACP
+D. Auto create
+
+**Câu 196: Để PAgP tạo được EtherChannel, cần mode nào?**
+A. auto - auto
+B. **desirable - desirable hoặc desirable - auto** ✓
+C. on - on
+D. Bất kỳ
+
+**Câu 197: EtherChannel load-balancing dựa trên gì (mặc định)?**
+A. Round-robin
+B. **Source/Dest MAC hoặc IP** ✓
+C. Random
+D. Port number only
+
+### PHẦN 17: STP ADVANCED (10 câu)
+
+**Câu 198: RSTP (Rapid STP) là chuẩn IEEE nào?**
+A. 802.1D
+B. **802.1w** ✓
+C. 802.1Q
+D. 802.1X
+
+**Câu 199: PVST+ là gì?**
+A. Chuẩn IEEE
+B. **Cisco proprietary, STP per VLAN** ✓
+C. Open standard
+D. Routing protocol
+
+**Câu 200: MSTP là chuẩn IEEE nào?**
+A. 802.1D
+B. 802.1w
+C. **802.1s** ✓
+D. 802.1Q
+
+**Câu 201: PortFast có tác dụng gì?**
+A. Tăng tốc độ port
+B. **Port chuyển sang Forwarding ngay, bỏ qua Listening/Learning** ✓
+C. Disable STP
+D. Tăng priority
+
+**Câu 202: BPDUGuard có tác dụng gì?**
+A. Protect root bridge
+B. **Shutdown port nếu nhận BPDU** ✓
+C. Filter BPDU
+D. Forward BPDU
+
+**Câu 203: RootGuard có tác dụng gì?**
+A. Shutdown port
+B. **Prevent port becoming root port** ✓
+C. Protect access ports
+D. Filter traffic
+
+**Câu 204: LoopGuard có tác dụng gì?**
+A. Prevent loops
+B. **Prevent alternate/root port becoming designated port do mất BPDUs** ✓
+C. Shutdown port
+D. Protect root
+
+**Câu 205: UplinkFast dùng khi nào?**
+A. Root bridge
+B. **Access layer switch, fast convergence khi uplink fail** ✓
+C. Distribution layer
+D. Core layer
+
+**Câu 206: BackboneFast dùng để?**
+A. Fast convergence ở access layer
+B. **Detect indirect link failure, fast convergence** ✓
+C. Protect root bridge
+D. Load balancing
+
+**Câu 207: STP Bridge Priority range là?**
+A. 0-255
+B. 1-65535
+C. **0-65535 (increments of 4096)** ✓
+D. 0-32768
+
+### PHẦN 18: WIRELESS LAN (10 câu)
+
+**Câu 208: SSID là viết tắt của?**
+A. Secure Service Identifier
+B. **Service Set Identifier** ✓
+C. System Service ID
+D. Security Set ID
+
+**Câu 209: BSS là gì?**
+A. Basic Security Set
+B. **Basic Service Set (1 AP)** ✓
+C. Broadband Service Set
+D. Bridge Service Set
+
+**Câu 210: ESS là gì?**
+A. Enhanced Service Set
+B. **Extended Service Set (multiple APs, same SSID)** ✓
+C. Ethernet Service Set
+D. Enterprise Service Set
+
+**Câu 211: WPA2 sử dụng encryption nào?**
+A. WEP
+B. TKIP
+C. **AES (CCMP)** ✓
+D. DES
+
+**Câu 212: WPA3 cải thiện gì so với WPA2?**
+A. Tốc độ nhanh hơn
+B. **SAE (Simultaneous Authentication of Equals), better protection** ✓
+C. Range xa hơn
+D. Hỗ trợ nhiều devices hơn
+
+**Câu 213: 802.11n hoạt động ở tần số nào?**
+A. 2.4 GHz
+B. 5 GHz
+C. **Cả 2.4 GHz và 5 GHz** ✓
+D. 6 GHz
+
+**Câu 214: 802.11ac hoạt động ở tần số nào?**
+A. 2.4 GHz
+B. **5 GHz only** ✓
+C. Cả 2.4 và 5 GHz
+D. 6 GHz
+
+**Câu 215: 802.11ax (WiFi 6) hoạt động ở tần số nào?**
+A. 2.4 GHz
+B. 5 GHz
+C. **2.4 GHz, 5 GHz, và 6 GHz** ✓
+D. 6 GHz only
+
+**Câu 216: Channel width càng lớn thì?**
+A. Range càng xa
+B. **Throughput càng cao nhưng interference nhiều hơn** ✓
+C. Bảo mật tốt hơn
+D. Không ảnh hưởng
+
+**Câu 217: LWAPP/CAPWAP là giao thức gì?**
+A. Wireless encryption
+B. **Control and Provisioning of Wireless Access Points** ✓
+C. Authentication protocol
+D. Routing protocol
+
+### PHẦN 19: QoS (Quality of Service) (10 câu)
+
+**Câu 218: QoS dùng để làm gì?**
+A. Tăng bandwidth
+B. **Prioritize traffic, đảm bảo quality cho critical applications** ✓
+C. Bảo mật
+D. Giảm latency cho tất cả traffic
+
+**Câu 219: CoS (Class of Service) hoạt động ở layer nào?**
+A. **Layer 2 (802.1p)** ✓
+B. Layer 3
+C. Layer 4
+D. Layer 7
+
+**Câu 220: DSCP (Differentiated Services Code Point) hoạt động ở layer nào?**
+A. Layer 2
+B. **Layer 3 (IP header)** ✓
+C. Layer 4
+D. Layer 7
+
+**Câu 221: CoS có bao nhiêu bits?**
+A. **3 bits (0-7)** ✓
+B. 6 bits
+C. 8 bits
+D. 16 bits
+
+**Câu 222: DSCP có bao nhiêu bits?**
+A. 3 bits
+B. **6 bits (0-63)** ✓
+C. 8 bits
+D. 16 bits
+
+**Câu 223: EF (Expedited Forwarding) DSCP value là?**
+A. 0
+B. 8
+C. **46** ✓
+D. 63
+
+**Câu 224: AF (Assured Forwarding) có bao nhiêu classes?**
+A. 3
+B. **4** ✓
+C. 5
+D. 8
+
+**Câu 225: Queuing mechanism nào là FIFO?**
+A. Priority Queuing
+B. **First In First Out (no prioritization)** ✓
+C. Weighted Fair Queuing
+D. Class-Based Weighted Fair Queuing
+
+**Câu 226: LLQ (Low Latency Queuing) dùng cho traffic nào?**
+A. Bulk data
+B. **Voice, video (real-time)** ✓
+C. Email
+D. File transfer
+
+**Câu 227: Policing và Shaping khác nhau như thế nào?**
+A. Giống nhau
+B. **Policing drop excess, Shaping buffer và delay** ✓
+C. Policing slow, Shaping fast
+D. Không khác
+
+### PHẦN 20: WAN TECHNOLOGIES (10 câu)
+
+**Câu 228: PPP là viết tắt của?**
+A. Private Point Protocol
+B. **Point-to-Point Protocol** ✓
+C. Public Point Protocol
+D. Packet Point Protocol
+
+**Câu 229: PPP hoạt động ở layer nào?**
+A. Layer 1
+B. **Layer 2** ✓
+C. Layer 3
+D. Layer 4
+
+**Câu 230: HDLC là gì?**
+A. Routing protocol
+B. **High-Level Data Link Control (Layer 2 protocol)** ✓
+C. WAN service
+D. Encryption method
+
+**Câu 231: Cisco HDLC khác HDLC chuẩn ở điểm nào?**
+A. Không khác
+B. **Cisco thêm proprietary field** ✓
+C. Tốc độ khác
+D. Encapsulation khác
+
+**Câu 232: PPP authentication methods gồm?**
+A. MD5
+B. **PAP và CHAP** ✓
+C. SHA
+D. AES
+
+**Câu 233: PAP (Password Authentication Protocol) có đặc điểm gì?**
+A. Encrypted
+B. **Clear-text, không bảo mật** ✓
+C. Challenge-response
+D. Certificate-based
+
+**Câu 234: CHAP (Challenge Handshake Authentication Protocol) có đặc điểm gì?**
+A. Clear-text
+B. **Challenge-response, MD5 hash** ✓
+C. No authentication
+D. Certificate-based
+
+**Câu 235: Frame Relay hoạt động ở layer nào?**
+A. Layer 1
+B. **Layer 2** ✓
+C. Layer 3
+D. Layer 4
+
+**Câu 236: DLCI trong Frame Relay là gì?**
+A. IP address
+B. **Data Link Connection Identifier** ✓
+C. MAC address
+D. Port number
+
+**Câu 237: MPLS là viết tắt của?**
+A. Multi-Protocol LAN Service
+B. **Multi-Protocol Label Switching** ✓
+C. Multiple Path Link Service
+D. Metro Point LAN Service
+
+### PHẦN 21: GRE TUNNEL (8 câu)
+
+**Câu 238: GRE là viết tắt của?**
+A. Generic Router Encapsulation
+B. **Generic Routing Encapsulation** ✓
+C. General Route Encryption
+D. Global Routing Extension
+
+**Câu 239: GRE tunnel có đặc điểm gì?**
+A. Encrypted
+B. **Encapsulate IP packets, không encrypted** ✓
+C. Only for IPv4
+D. Require certificate
+
+**Câu 240: GRE thêm bao nhiêu bytes overhead?**
+A. 4 bytes
+B. 20 bytes
+C. **24 bytes (20 IP + 4 GRE)** ✓
+D. 50 bytes
+
+**Câu 241: GRE tunnel hỗ trợ multicast không?**
+A. Không
+B. **Có** ✓
+C. Chỉ với IPv6
+D. Cần cấu hình đặc biệt
+
+**Câu 242: GRE over IPSec có lợi gì?**
+A. Faster
+B. **Encrypted + hỗ trợ multicast/routing protocols** ✓
+C. Simpler
+D. Không có lợi
+
+**Câu 243: GRE tunnel MTU nên set bao nhiêu (nếu physical MTU = 1500)?**
+A. 1500
+B. **1476 (1500 - 24)** ✓
+C. 1400
+D. 1200
+
+**Câu 244: Recursive routing trong GRE tunnel là gì?**
+A. Normal routing
+B. **Tunnel destination route qua chính tunnel đó** ✓
+C. Load balancing
+D. Multipath routing
+
+**Câu 245: Để tránh recursive routing, cần?**
+A. Disable routing
+B. **Ensure tunnel destination reachable qua physical interface** ✓
+C. Use static routes only
+D. Disable GRE
+
+### PHẦN 22: ROUTE REDISTRIBUTION (8 câu)
+
+**Câu 246: Route Redistribution là gì?**
+A. Load balancing
+B. **Share routes giữa các routing protocols khác nhau** ✓
+C. Route filtering
+D. Route summarization
+
+**Câu 247: Khi redistribute giữa OSPF và RIP, vấn đề gì có thể xảy ra?**
+A. Không vấn đề
+B. **Routing loops, suboptimal routing** ✓
+C. Faster convergence
+D. Better load balancing
+
+**Câu 248: Seed metric trong redistribution là gì?**
+A. Original metric
+B. **Initial metric assigned to redistributed routes** ✓
+C. Best metric
+D. Average metric
+
+**Câu 249: Administrative Distance dùng để làm gì?**
+A. Calculate best path
+B. **Choose giữa routes từ protocols khác nhau** ✓
+C. Set metric
+D. Filter routes
+
+**Câu 250: Route map trong redistribution dùng để?**
+A. Disable redistribution
+B. **Filter và modify routes selectively** ✓
+C. Tăng tốc độ
+D. Bảo mật
+
+**Câu 251: Redistribute OSPF vào RIP cần set gì?**
+A. Area
+B. **Metric (hop count)** ✓
+C. Priority
+D. Cost
+
+**Câu 252: Redistribute RIP vào OSPF cần set gì?**
+A. Hop count
+B. **Metric (cost) và metric-type** ✓
+C. Priority
+D. Version
+
+**Câu 253: OSPF metric-type E1 và E2 khác nhau như thế nào?**
+A. Giống nhau
+B. **E1: metric tăng khi đi qua OSPF domain, E2: metric không đổi** ✓
+C. E1 nhanh hơn
+D. E2 bảo mật hơn
+
+### PHẦN 23: IPv6 ADVANCED (10 câu)
+
+**Câu 254: IPv6 address :: có nghĩa gì?**
+A. Loopback
+B. **Unspecified address (0.0.0.0 trong IPv4)** ✓
+C. Default route
+D. Multicast
+
+**Câu 255: IPv6 address ::1 có nghĩa gì?**
+A. Default route
+B. **Loopback (127.0.0.1 trong IPv4)** ✓
+C. Link-local
+D. Multicast
+
+**Câu 256: Link-local address IPv6 có prefix nào?**
+A. 2001::/64
+B. FC00::/7
+C. **FE80::/10** ✓
+D. FF00::/8
+
+**Câu 257: Unique Local Address (ULA) IPv6 có prefix nào?**
+A. 2001::/64
+B. **FC00::/7 (FD00::/8 commonly used)** ✓
+C. FE80::/10
+D. FF00::/8
+
+**Câu 258: Global Unicast Address IPv6 thường có prefix nào?**
+A. FC00::/7
+B. FE80::/10
+C. **2000::/3** ✓
+D. FF00::/8
+
+**Câu 259: Multicast address IPv6 có prefix nào?**
+A. FE80::/10
+B. FC00::/7
+C. 2001::/64
+D. **FF00::/8** ✓
+
+**Câu 260: IPv6 không có broadcast, thay vào đó dùng?**
+A. Unicast
+B. Anycast
+C. **Multicast** ✓
+D. Broadcast vẫn có
+
+**Câu 261: FF02::1 là địa chỉ multicast cho?**
+A. All routers
+B. **All nodes** ✓
+C. DHCP servers
+D. DNS servers
+
+**Câu 262: FF02::2 là địa chỉ multicast cho?**
+A. All nodes
+B. **All routers** ✓
+C. DHCP servers
+D. NTP servers
+
+**Câu 263: EUI-64 trong IPv6 có tác dụng gì?**
+A. Encryption
+B. **Tạo Interface ID từ MAC address** ✓
+C. Routing
+D. Authentication
+
+### PHẦN 24: NETWORK SECURITY ADVANCED (12 câu)
+
+**Câu 264: Port Security trên switch dùng để?**
+A. Encrypt traffic
+B. **Limit số MAC addresses trên port** ✓
+C. Filter IP
+D. Monitor traffic
+
+**Câu 265: Port Security violation mode "shutdown" làm gì?**
+A. Drop packets
+B. **Err-disable port** ✓
+C. Log only
+D. Send SNMP trap
+
+**Câu 266: Port Security violation mode "restrict" làm gì?**
+A. Shutdown port
+B. **Drop violating frames, log, SNMP trap** ✓
+C. Allow all
+D. Protect only
+
+**Câu 267: Port Security violation mode "protect" làm gì?**
+A. Shutdown port
+B. **Drop violating frames, không log** ✓
+C. Allow all
+D. Send alert
+
+**Câu 268: DHCP Snooping có tác dụng gì?**
+A. Speed up DHCP
+B. **Prevent rogue DHCP servers** ✓
+C. Encrypt DHCP
+D. Load balance DHCP
+
+**Câu 269: Dynamic ARP Inspection (DAI) dùng để?**
+A. Speed up ARP
+B. **Prevent ARP spoofing/poisoning** ✓
+C. Encrypt ARP
+D. Cache ARP
+
+**Câu 270: IP Source Guard dùng để?**
+A. NAT
+B. **Prevent IP spoofing** ✓
+C. Routing
+D. DHCP
+
+**Câu 271: 802.1X là gì?**
+A. VLAN protocol
+B. **Port-based Network Access Control (NAC)** ✓
+C. Routing protocol
+D. QoS standard
+
+**Câu 272: RADIUS hoạt động trên port nào?**
+A. TCP 49
+B. **UDP 1812 (auth), 1813 (accounting)** ✓
+C. TCP 1812
+D. UDP 49
+
+**Câu 273: TACACS+ hoạt động trên port nào?**
+A. UDP 49
+B. **TCP 49** ✓
+C. UDP 1812
+D. TCP 1812
+
+**Câu 274: RADIUS và TACACS+ khác nhau như thế nào?**
+A. Giống nhau
+B. **RADIUS UDP, combines auth+author; TACACS+ TCP, separates AAA** ✓
+C. TACACS+ mới hơn
+D. RADIUS bảo mật hơn
+
+**Câu 275: AAA là viết tắt của?**
+A. Access, Audit, Authorization
+B. **Authentication, Authorization, Accounting** ✓
+C. Automatic Access Administration
+D. Advanced Authentication Algorithm
+
+### PHẦN 25: TROUBLESHOOTING TOOLS (8 câu)
+
+**Câu 276: Wireshark là gì?**
+A. IDS
+B. **Packet analyzer/sniffer** ✓
+C. Firewall
+D. Antivirus
+
+**Câu 277: tcpdump hoạt động trên?**
+A. Windows only
+B. **Linux/Unix** ✓
+C. Cisco IOS
+D. Web browser
+
+**Câu 278: Nmap dùng để?**
+A. Monitor bandwidth
+B. **Network scanning, port scanning** ✓
+C. Encrypt traffic
+D. Route packets
+
+**Câu 279: iperf dùng để?**
+A. Scan ports
+B. **Test bandwidth/throughput** ✓
+C. Monitor CPU
+D. Analyze packets
+
+**Câu 280: MTR (My TraceRoute) kết hợp?**
+A. ping + nslookup
+B. **ping + traceroute** ✓
+C. netstat + route
+D. dig + host
+
+**Câu 281: Câu lệnh debug trên Cisco router có nguy cơ gì?**
+A. Xóa config
+B. **High CPU usage, có thể crash router** ✓
+C. Không nguy hiểm
+D. Chỉ xem log
+
+**Câu 282: Để capture packets trên Cisco switch, dùng?**
+A. tcpdump
+B. **SPAN/RSPAN/ERSPAN** ✓
+C. Wireshark
+D. Debug
+
+**Câu 283: SPAN là viết tắt của?**
+A. Secure Port Analysis
+B. **Switched Port Analyzer** ✓
+C. System Packet Analyzer
+D. Security Port Access
+
+### PHẦN 26: SDWAN & MODERN NETWORKING (7 câu)
+
+**Câu 284: SD-WAN là viết tắt của?**
+A. Secure Domain WAN
+B. **Software-Defined WAN** ✓
+C. Standard Digital WAN
+D. System Data WAN
+
+**Câu 285: SD-WAN có lợi ích gì?**
+A. Rẻ hơn traditional WAN only
+B. **Centralized management, app-aware routing, multi-link support** ✓
+C. Faster only
+D. More secure only
+
+**Câu 286: SDN (Software-Defined Networking) tách biệt?**
+A. Hardware và software
+B. **Control plane và data plane** ✓
+C. LAN và WAN
+D. IPv4 và IPv6
+
+**Câu 287: OpenFlow là gì?**
+A. Routing protocol
+B. **SDN protocol (controller ↔ switches)** ✓
+C. VPN protocol
+D. QoS mechanism
+
+**Câu 288: NFV là viết tắt của?**
+A. Network Flow Virtualization
+B. **Network Functions Virtualization** ✓
+C. New Fast VLAN
+D. Network Firewall Version
+
+**Câu 289: Intent-Based Networking (IBN) là gì?**
+A. Traditional networking
+B. **Network tự động config dựa trên business intent** ✓
+C. Manual configuration
+D. CLI-based only
+
+**Câu 290: Zero Trust Network có nguyên tắc gì?**
+A. Trust everyone inside
+B. **Never trust, always verify** ✓
+C. Trust no one
+D. Trust based on IP
+
+### A. ROUTING & SWITCHING (15 câu)
+
+**Câu 1:** Router lưu cấu hình đang chạy (running-config) ở đâu?
+A. Flash
+B. **RAM** ✓
+C. NVRAM
+D. ROM
+
+**Câu 2:** Lệnh nào lưu cấu hình hiện tại vào NVRAM?
+A. write memory
+B. copy running-config startup-config
+C. **Cả A và B đều đúng** ✓
+D. save config
+
+**Câu 3:** Metric của RIP là gì?
+A. Bandwidth
+B. **Hop count** ✓
+C. Delay
+D. Cost
+
+**Câu 4:** RIPv2 gửi update đến địa chỉ nào?
+A. 255.255.255.255
+B. **224.0.0.9** ✓
+C. 224.0.0.5
+D. 239.255.255.255
+
+**Câu 5:** OSPF sử dụng thuật toán nào?
+A. Bellman-Ford
+B. **Dijkstra** ✓
+C. Distance Vector
+D. DUAL
+
+**Câu 6:** RIP gửi routing update mỗi bao lâu?
+A. 15 giây
+B. 60 giây
+C. **30 giây** ✓
+D. 90 giây
+
+**Câu 7:** Ưu điểm của Static Routing là gì?
+A. Tự động cập nhật khi topology thay đổi
+B. **Bảo mật cao, tiêu tốn ít băng thông** ✓
+C. Dễ dàng triển khai trên mạng lớn
+D. Không cần kiến thức về topology
+
+**Câu 8:** Wildcard mask của subnet 192.168.10.0/24 là gì?
+A. 255.255.255.0
+B. 0.0.0.0
+C. **0.0.0.255** ✓
+D. 255.255.255.255
+
+**Câu 9:** Lệnh nào hiển thị routing table trên router?
+A. show ip interface
+B. **show ip route** ✓
+C. show running-config
+D. show protocols
+
+**Câu 10:** Trong routing table, ký hiệu "C" có nghĩa là gì?
+A. Static route
+B. **Connected** ✓
+C. RIP route
+D. OSPF route
+
+**Câu 11:** Default route được cấu hình như thế nào?
+A. ip route 255.255.255.255 255.255.255.255 <next-hop>
+B. **ip route 0.0.0.0 0.0.0.0 <next-hop>** ✓
+C. ip route any any <next-hop>
+D. ip default-gateway <next-hop>
+
+**Câu 12:** Lệnh nào loại bỏ static route?
+A. delete ip route
+B. remove ip route
+C. **no ip route** ✓
+D. clear ip route
+
+**Câu 13:** RIPv2 khác RIPv1 ở điểm nào?
+A. Hỗ trợ VLSM/CIDR
+B. Có authentication
+C. Gửi multicast thay vì broadcast
+D. **Tất cả đều đúng** ✓
+
+**Câu 14:** Passive-interface trong RIP dùng để làm gì?
+A. Tắt interface
+B. **Ngăn gửi routing update ra interface đó** ✓
+C. Chặn nhận routing update
+D. Tăng tốc độ hội tụ
+
+**Câu 15:** OSPF thuộc loại giao thức định tuyến nào?
+A. Distance Vector
+B. **Link-State** ✓
+C. Hybrid
+D. Path Vector
+
+---
+
+### B. VLAN & INTER-VLAN ROUTING (10 câu)
+
+**Câu 16:** VLAN được tạo trên thiết bị nào?
+A. Router
+B. **Switch** ✓
+C. Hub
+D. Access Point
+
+**Câu 17:** Trunk port cho phép traffic của bao nhiêu VLAN đi qua?
+A. Chỉ 1 VLAN
+B. Tối đa 10 VLAN
+C. **Nhiều VLAN** ✓
+D. Không VLAN nào
+
+**Câu 18:** Giao thức encapsulation phổ biến cho trunk là gì?
+A. **802.1Q (dot1q)** ✓
+B. ISL
+C. VTP
+D. STP
+
+**Câu 19:** Router-on-a-Stick sử dụng gì để phân biệt các VLAN?
+A. Multiple physical interfaces
+B. **Sub-interface** ✓
+C. Virtual interface
+D. Loopback interface
+
+**Câu 20:** Native VLAN trên trunk mặc định là VLAN nào?
+A. VLAN 0
+B. **VLAN 1** ✓
+C. VLAN 99
+D. VLAN 1005
+
+**Câu 21:** Multilayer Switch routing giữa các VLAN bằng cách nào?
+A. Physical interface
+B. Sub-interface
+C. **SVI (Switch Virtual Interface)** ✓
+D. Trunk interface
+
+**Câu 22:** Lệnh nào gán port vào VLAN 10?
+A. vlan 10
+B. set vlan 10
+C. **switchport access vlan 10** ✓
+D. interface vlan 10
+
+**Câu 23:** Lệnh tạo trunk port trên switch?
+A. trunk enable
+B. **switchport mode trunk** ✓
+C. switchport trunk on
+D. set trunk
+
+**Câu 24:** Legacy Inter-VLAN routing có nhược điểm gì?
+A. Cấu hình phức tạp
+B. **Lãng phí port router** ✓
+C. Không bảo mật
+D. Tốc độ chậm
+
+**Câu 25:** Lệnh nào kiểm tra VLAN đã tạo?
+A. show vlan database
+B. **show vlan brief** ✓
+C. show running-config
+D. Cả A và B
+
+---
+
+### C. DHCP & NAT (8 câu)
+
+**Câu 26:** DHCP hoạt động ở layer nào của OSI?
+A. Layer 2
+B. Layer 3
+C. Layer 4
+D. **Layer 7** ✓
+
+**Câu 27:** Thứ tự các bước trong DHCP là gì?
+A. Offer → Discover → Request → Acknowledge
+B. **Discover → Offer → Request → Acknowledge** ✓
+C. Request → Discover → Offer → Acknowledge
+D. Discover → Request → Offer → Acknowledge
+
+**Câu 28:** DHCP client gửi Discover message đến địa chỉ nào?
+A. DHCP server IP
+B. **255.255.255.255** ✓
+C. 224.0.0.9
+D. 127.0.0.1
+
+**Câu 29:** DHCP sử dụng port nào?
+A. TCP 67 và 68
+B. **UDP 67 và 68** ✓
+C. TCP 80
+D. UDP 53
+
+**Câu 30:** Lệnh nào loại trừ dải IP không được cấp phát DHCP?
+A. **ip dhcp excluded-address** ✓
+B. no ip dhcp pool
+C. ip dhcp deny
+D. dhcp exclude
+
+**Câu 31:** NAT chuyển đổi gì?
+A. **Private IP ↔ Public IP** ✓
+B. MAC address
+C. Port number only
+D. VLAN ID
+
+**Câu 32:** NAT Overload còn được gọi là gì?
+A. Static NAT
+B. Dynamic NAT
+C. **PAT (Port Address Translation)** ✓
+D. Double NAT
+
+**Câu 33:** Port Forwarding trong NAT dùng để làm gì?
+A. Chuyển port sang IP khác
+B. **Cho phép truy cập từ Internet vào server nội bộ** ✓
+C. Tăng tốc độ kết nối
+D. Bảo mật mạng
+
+---
+
+### D. ACL (ACCESS CONTROL LIST) (10 câu)
+
+**Câu 34:** Standard ACL lọc traffic dựa trên gì?
+A. **Source IP address** ✓
+B. Destination IP address
+C. Port number
+D. Protocol type
+
+**Câu 35:** Range số ACL của Standard ACL là gì?
+A. **1-99 và 1300-1999** ✓
+B. 100-199 và 2000-2699
+C. 1-1000
+D. 200-299
+
+**Câu 36:** Extended ACL được đặt ở đâu trong topology?
+A. Gần destination
+B. **Gần source** ✓
+C. Ở giữa mạng
+D. Trên core switch
+
+**Câu 37:** Wildcard mask 0.0.0.0 tương đương với keyword nào?
+A. any
+B. **host** ✓
+C. network
+D. broadcast
+
+**Câu 38:** Trong ACL, implicit deny có nghĩa là gì?
+A. Cho phép tất cả traffic
+B. **Từ chối tất cả traffic không được permit** ✓
+C. Cảnh báo administrator
+D. Log tất cả traffic
+
+**Câu 39:** ACL xử lý traffic theo thứ tự nào?
+A. Bottom-up
+B. **Top-down** ✓
+C. Ngẫu nhiên
+D. Theo priority
+
+**Câu 40:** Lệnh nào apply ACL vào interface?
+A. **ip access-group** ✓
+B. ip access-list
+C. access-class
+D. apply acl
+
+**Câu 41:** Extended ACL có thể lọc theo port SSH (22) không?
+A. Không
+B. **Có** ✓
+C. Chỉ khi dùng với firewall
+D. Cần thêm module
+
+**Câu 42:** Một interface có thể có bao nhiêu ACL per direction?
+A. Không giới hạn
+B. Tối đa 5
+C. **1 ACL per protocol per direction** ✓
+D. 2 ACL
+
+**Câu 43:** Lệnh nào xóa ACL số 10?
+A. delete access-list 10
+B. remove acl 10
+C. **no access-list 10** ✓
+D. clear access-list 10
+
+---
+
+### E. WINDOWS & LINUX ADMINISTRATION (7 câu)
+
+**Câu 44:** Active Directory Domain Services (AD DS) quản lý gì?
+A. File sharing only
+B. **User authentication và authorization tập trung** ✓
+C. Network routing
+D. Email service
+
+**Câu 45:** Share permission "Change" cho phép làm gì?
+A. Chỉ xem file
+B. **Read + tạo/sửa/xóa file** ✓
+C. Thay đổi permission
+D. Take ownership
+
+**Câu 46:** File /etc/passwd trong Linux chứa gì?
+A. Mật khẩu user
+B. **Thông tin user account** ✓
+C. Group information
+D. Network configuration
+
+**Câu 47:** Lệnh nào tạo user trong Linux?
+A. createuser
+B. adduser
+C. **useradd** ✓
+D. newuser
+
+**Câu 48:** Lệnh nào xem IP address trên Linux?
+A. ipconfig
+B. **ifconfig hoặc ip addr** ✓
+C. netstat
+D. route
+
+**Câu 49:** DNS Server có chức năng gì?
+A. Cấp phát IP
+B. **Phân giải tên miền thành IP** ✓
+C. Chia sẻ file
+D. Bảo mật mạng
+
+**Câu 50:** Group Policy trong Windows dùng để làm gì?
+A. Tạo group user
+B. **Áp dụng chính sách quản lý tập trung** ✓
+C. Chia sẻ file
+D. Cấu hình DNS
+
+
+### F. DHCP & NETWORK SERVICES (10 câu)
+
+**Câu 51:** DHCP Discover message được gửi dưới dạng gì?
+A. Unicast
+B. **Broadcast** ✓
+C. Multicast
+D. Anycast
+
+**Câu 52:** DHCP Server gửi Offer message đến client như thế nào?
+A. **Broadcast hoặc Unicast tùy cấu hình** ✓
+B. Chỉ Broadcast
+C. Chỉ Unicast
+D. Multicast
+
+**Câu 53:** Port nào được DHCP Server sử dụng?
+A. UDP 68
+B. **UDP 67** ✓
+C. TCP 67
+D. TCP 68
+
+**Câu 54:** DHCP Relay (ip helper-address) được cấu hình ở đâu?
+A. DHCP Server
+B. Switch
+C. **Router interface kết nối với client subnet** ✓
+D. Client machine
+
+**Câu 55:** Lệnh nào loại trừ dải IP không được DHCP cấp phát?
+A. ip dhcp exclude
+B. no ip dhcp pool
+C. **ip dhcp excluded-address** ✓
+D. dhcp reservation
+
+**Câu 56:** DHCP lease time có tác dụng gì?
+A. Thời gian client giữ IP
+B. Sau đó phải renew
+C. Hết hạn thì IP được thu hồi
+D. **Tất cả đều đúng** ✓
+
+**Câu 57:** DNS Server phân giải tên miền sang gì?
+A. MAC address
+B. **IP address** ✓
+C. Port number
+D. VLAN ID
+
+**Câu 58:** DNS sử dụng port nào?
+A. TCP 80
+B. **UDP 53** ✓
+C. TCP 443
+D. UDP 67
+
+**Câu 59:** Lệnh nào kiểm tra DHCP bindings trên router?
+A. show dhcp pool
+B. show ip dhcp database
+C. **show ip dhcp binding** ✓
+D. show dhcp server
+
+**Câu 60:** DHCP Option 3 chỉ định thông tin gì?
+A. DNS Server
+B. **Default Gateway** ✓
+C. Subnet Mask
+D. Lease Time
+
+---
+
+### G. NAT (NETWORK ADDRESS TRANSLATION) (8 câu)
+
+**Câu 61:** NAT chuyển đổi địa chỉ ở layer nào?
+A. Layer 2
+B. **Layer 3** ✓
+C. Layer 4
+D. Layer 7
+
+**Câu 62:** PAT (Port Address Translation) còn được gọi là gì?
+A. Static NAT
+B. Dynamic NAT
+C. **NAT Overload** ✓
+D. Inside NAT
+
+**Câu 63:** Lệnh nào xem NAT translation table?
+A. show nat translations
+B. show ip nat database
+C. **show ip nat translations** ✓
+D. show nat statistics
+
+**Câu 64:** Inside Local address là gì?
+A. Public IP ra Internet
+B. **Private IP trong mạng LAN** ✓
+C. IP của router WAN interface
+D. IP của ISP
+
+**Câu 65:** Static NAT thường dùng cho mục đích gì?
+A. Cho nhiều client ra Internet
+B. **Publish server ra Internet với IP cố định** ✓
+C. Tiết kiệm địa chỉ IP
+D. Load balancing
+
+**Câu 66:** Port Forwarding hoạt động ở NAT loại nào?
+A. Dynamic NAT
+B. **Static NAT** ✓
+C. NAT Overload
+D. Pool NAT
+
+**Câu 67:** Lệnh nào clear NAT translations?
+A. clear ip nat all
+B. **clear ip nat translation*** ✓
+C. delete nat translations
+D. reset nat table
+
+**Câu 68:** NAT có thể gây vấn đề gì với một số ứng dụng?
+A. IPsec VPN
+B. FTP active mode
+C. SIP/VoIP
+D. **Tất cả đều đúng** ✓
+
+---
+
+### H. WINDOWS SERVER ADMINISTRATION (6 câu)
+
+**Câu 69:** Domain Controller lưu trữ Active Directory database ở file nào?
+A. AD.db
+B. **NTDS.dit** ✓
+C. SAM
+D. Registry
+
+**Câu 70:** NTFS permission "Modify" cho phép làm gì?
+A. Read only
+B. Read + Write
+C. **Read + Write + Delete** ✓
+D. Full Control
+
+**Câu 71:** Group Policy áp dụng theo thứ tự nào?
+A. Domain → OU → Site
+B. Site → OU → Domain
+C. **Local → Site → Domain → OU** ✓
+D. OU → Domain → Site
+
+**Câu 72:** DNS Zone loại nào cho phép dynamic update?
+A. Secondary Zone
+B. Stub Zone
+C. **Primary Zone** ✓
+D. Forward Zone
+
+**Câu 73:** File /etc/shadow trong Linux chứa gì?
+A. User information
+B. **Encrypted passwords** ✓
+C. Group membership
+D. Shell configuration
+
+**Câu 74:** Lệnh nào thay đổi quyền sở hữu file trong Linux?
+A. chmod
+B. **chown** ✓
+C. chgrp
+D. usermod
+
+---
+
+### I. SECURITY & TROUBLESHOOTING (6 câu)
+
+**Câu 75:** Port Security violation mode "shutdown" làm gì?
+A. Chỉ log vi phạm
+B. Drop packet vi phạm
+C. **Shutdown interface** ✓
+D. Gửi SNMP trap
+
+**Câu 76:** 802.1X authentication dùng protocol nào?
+A. TACACS+
+B. **RADIUS** ✓
+C. LDAP
+D. Kerberos
+
+**Câu 77:** Lệnh nào kiểm tra neighbor OSPF?
+A. show ospf database
+B. **show ip ospf neighbor** ✓
+C. show ip protocols
+D. show ospf interface
+
+**Câu 78:** Spanning Tree Protocol (STP) ngăn chặn vấn đề gì?
+A. Routing loop
+B. **Switching loop** ✓
+C. Broadcast storm
+D. Cả B và C
+
+**Câu 79:** HSRP (Hot Standby Router Protocol) dùng để làm gì?
+A. Load balancing
+B. **Gateway redundancy** ✓
+C. Dynamic routing
+D. NAT failover
+
+**Câu 80:** Lệnh nào kiểm tra trunk port trên switch?
+A. show vlan
+B. show interface status
+C. **show interface trunk** ✓
+D. show spanning-tree
